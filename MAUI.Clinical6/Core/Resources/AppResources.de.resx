@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BiometricAuthenticationError" xml:space="preserve">
+		<value>Authentifizierung fehlgeschlagen</value>
+	</data>
+	<data name="BiometricBiometricsFaceIDFooter" xml:space="preserve">
+		<value>Achtung: Alle auf diesem Gerät gespeicherten Face ID-Fingerabdrücke können zum Anmelden bei Ihrem Konto verwendet werden.</value>
+	</data>
+	<data name="BiometricBiometricsFingerPrintFooter" xml:space="preserve">
+		<value>Achtung: Alle auf diesem Gerät gespeicherten Fingerabdrücke können zum Anmelden bei Ihrem Konto verwendet werden.</value>
+	</data>
+	<data name="BiometricBiometricsTouchIDFooter" xml:space="preserve">
+		<value>Achtung: Alle auf diesem Gerät gespeicherten Touch-ID-Fingerabdrücke können zum Anmelden bei Ihrem Konto verwendet werden.</value>
+	</data>
+	<data name="BiometricErrorTitle" xml:space="preserve">
+		<value>Fehler</value>
+	</data>
+	<data name="BiometricFaceIDEnableTitle" xml:space="preserve">
+		<value>Face ID aktivieren</value>
+	</data>
+	<data name="BiometricFaceIDError" xml:space="preserve">
+		<value>{0} aktivieren</value>
+	</data>
+	<data name="BiometricFaceIDLoginTitle" xml:space="preserve">
+		<value>Anmeldung mit Face ID</value>
+	</data>
+	<data name="BiometricFaceIDMessage" xml:space="preserve">
+		<value>Nutzen Sie bei Ihrer nächsten Anmeldung Face ID, um schneller, einfacher und sicher auf Ihr Konto zuzugreifen.</value>
+	</data>
+	<data name="BiometricFingerPrinEnableTitle" xml:space="preserve">
+		<value>Fingerabdruck aktivieren</value>
+	</data>
+	<data name="BiometricFingerPrintMessage" xml:space="preserve">
+		<value>Nutzen Sie bei Ihrer nächsten Anmeldung Ihren Fingerabdruck, um schneller, einfacher und sicher auf Ihr Konto zuzugreifen.</value>
+	</data>
+	<data name="BiometricFingerPrinTitle" xml:space="preserve">
+		<value>Anmeldung mit Fingerabdruck</value>
+	</data>
+	<data name="BiometricNotAvailableTitle" xml:space="preserve">
+		<value>Das Gerät verfügt nicht über biometrische Methoden oder PIN zur Anmeldung.</value>
+	</data>
+	<data name="BiometricTouchIDDMessage" xml:space="preserve">
+		<value>Nutzen Sie bei Ihrer nächsten Anmeldung Touch ID, um schneller, einfacher und sicher auf Ihr Konto zuzugreifen.</value>
+	</data>
+	<data name="BiometricTouchIDEnableTitle" xml:space="preserve">
+		<value>Touch ID aktivieren</value>
+	</data>
+	<data name="BiometricTouchIDFirtsTimeTitle" xml:space="preserve">
+		<value>Bestätigen Sie jetzt Ihren Fingerabdruck.</value>
+	</data>
+	<data name="BiometricUseTouchId" xml:space="preserve">
+		<value>Touch ID verwenden</value>
+	</data>
+	<data name="BiometricUsePin" xml:space="preserve">
+		<value>PIN verwenden</value>
+	</data>
+	<data name="BiometricUseFingerprint" xml:space="preserve">
+		<value>Fingerabdruck verwenden</value>
+	</data>
+	<data name="BiometricUseFaceId" xml:space="preserve">
+		<value>Face ID verwenden</value>
+	</data>
+	<data name="BiometricFaceIDReason" xml:space="preserve">
+		<value>Versuchen Sie es noch einmal</value>
+	</data>
+	<data name="BiometricTouchIDTitle" xml:space="preserve">
+		<value>Scannen Sie Ihren Finger, um den Vorgang fortzusetzen.</value>
+	</data>
+	<data name="BiometricTouchIDLoginTitle" xml:space="preserve">
+		<value>Anmeldung mit Touch ID</value>
+	</data>
+	<data name="BiometricTryAgain" xml:space="preserve">
+		<value>Versuchen Sie es noch einmal</value>
+	</data>
+	<data name="BiometricTouchIDHint" xml:space="preserve">
+		<value>Berühren Sie den Sensor</value>
+	</data>
+	<data name="BiometricBiometricsNotNow" xml:space="preserve">
+		<value>Jetzt nicht</value>
+	</data>
+</root>

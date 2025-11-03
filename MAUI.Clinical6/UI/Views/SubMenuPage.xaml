@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Xamarin.Forms.Clinical6.Views.SubMenuPage" 
+    xmlns:views="clr-namespace:Xamarin.Forms.Clinical6.UI.Views" 
+    xmlns:ex="clr-namespace:Xamarin.Forms.Clinical6.UI.MarkupExtensions" 
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
+    xmlns:vm="clr-namespace:Xamarin.Forms.Clinical6.ViewModels"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    ios:Page.UseSafeArea="true"
+    xmlns:ctrl="clr-namespace:Xamarin.Forms.Clinical6.UI.Controls"
+    x:TypeArguments="vm:AppSubMenuViewModel" 
+    Title="{Binding PageTitle}">
+    <views:BaseContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" Margin="0,0,0,0"
+             Padding="0" ColumnSpacing="0" BackgroundColor="White" x:Name="grTop">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ctrl:CustomNavigationBar Title="{Binding PageTitle}" 
+                                      ButtonText="{ex:Localized NavActionBack}" 
+                                      Clicked="HandleTapped"/>
+
+            <ListView Grid.Row="2" Margin="0,1,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ItemTapped="Handle_ItemTapped" 
+                      AutomationProperties.IsInAccessibleTree="true" 
+                      AutomationProperties.Name = "{ex:Localized ResourceListHelpText}"
+                      ItemsSource="{Binding Menus}" CachingStrategy="RecycleElement" 
+                      HasUnevenRows="true" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="85">
+                            <Grid ColumnSpacing="0" HeightRequest="60" Padding="5,0" Margin="0,5,0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <ffimageloading:CachedImage Source="{Binding ImageUrl}" Aspect="AspectFit" VerticalOptions="Center"
+                                                     HorizontalOptions="Start" Margin="16,0,0,0" HeightRequest="22" />
+                                <Label Grid.Column="1" Text="{Binding Title}" Margin="16,0,0,0" VerticalOptions="Center" HorizontalOptions="Start"
+                                       Style="{StaticResource textSecondary}" TextColor="#4A4A4A" FontSize="16" />
+                                <Label Grid.Column="2" Text="{ex:Localized ContactPageViewText}" TextColor="#007AFF" FontSize="Small" 
+                                       Style="{StaticResource textSecondary}" VerticalOptions="Center" HorizontalOptions="End"/>
+                                <Image Grid.Column="3" Source="nav_arrow_right" HeightRequest="25" Margin="5" VerticalOptions="Center" />
+                                <BoxView Grid.ColumnSpan="4" HeightRequest="1" BackgroundColor="Gray" Opacity=".2" Margin="25,0,0,0" VerticalOptions="End" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </views:BaseContentPage.Content>
+</views:BaseContentPage>

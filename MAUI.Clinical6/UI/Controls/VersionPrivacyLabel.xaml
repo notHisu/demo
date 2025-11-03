@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Label
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Xamarin.Forms.Clinical6.UI.Controls.VersionPrivacyLabel"
+    Style="{StaticResource versionPrivacyLabel}"
+    AutomationProperties.IsInAccessibleTree="True">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span x:Name="_versionSpan" Style="{StaticResource versionSpan}"/>
+            <Span x:Name="_pipeSpan" Text="  |  " Style="{StaticResource pipeSpan}"/>
+            <Span x:Name="_privacySpan" Style="{StaticResource privacySpan}"/>
+        </FormattedString>
+    </Label.FormattedText>
+    <Label.GestureRecognizers>
+        <TapGestureRecognizer x:Name="_tapGestureRecognizer"/>
+    </Label.GestureRecognizers>
+</Label>

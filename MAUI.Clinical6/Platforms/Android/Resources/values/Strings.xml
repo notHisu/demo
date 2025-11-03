@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library_name">Xamarin.Forms.Clinical6.Android</string>
+<string name="fingerprint_description">Scan your finger to proceed.</string>   
+	<string name="fingerprint_hint">Touch Sensor</string>
+    <string name="cancel">Cancel.</string>
+	<string name="scan_cancelled_by_user">User cancelled the scan.</string>
+</resources>

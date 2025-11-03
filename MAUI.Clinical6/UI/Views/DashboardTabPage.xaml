@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            BarBackgroundColor="#F1F1F1"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom" 
+            BarTextColor="#666666"
+            SelectedTabColor="#137CC6"
+            IconImageSource="menuIcon"
+            Padding="0"
+            x:Class="Xamarin.Forms.Clinical6.Views.DashboardTabPage">
+</TabbedPage>
+
+
+<!--android:TabbedPage.BarItemColor="#666666" 
+android:TabbedPage.BarSelectedItemColor="#137CC6"-->

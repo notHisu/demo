@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Xamarin.Forms.Clinical6.UI.Views"
+    xmlns:ctrl="clr-namespace:Xamarin.Forms.Clinical6.UI.Controls" 
+    xmlns:ex="clr-namespace:Xamarin.Forms.Clinical6.UI.MarkupExtensions;assembly=MAUI.Clinical6"
+    xmlns:vm="clr-namespace:Xamarin.Forms.Clinical6.Core.ViewModels;assembly=MAUI.Clinical6"
+    x:TypeArguments="vm:AlertsViewModel"
+    x:Class="Xamarin.Forms.Clinical6.Views.AlertsPage"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    ios:Page.UseSafeArea="true">
+
+    <!-- This replaces Title=… with a centered TitleView -->
+    <NavigationPage.TitleView>
+        <Label 
+            Text="{ex:Localized AlertsText}"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            TextColor="{StaticResource DarkGrey}"
+            FontSize="Title"/>
+    </NavigationPage.TitleView>
+    
+    <views:BaseContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+            <BoxView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                     Margin="0" HeightRequest="1" BackgroundColor="#f3f8fb"/>
+
+            <StackLayout x:Name="_stackLayout" IsVisible="False">
+                <Image Margin="40,20,40,0" AutomationProperties.IsInAccessibleTree="False" Source="pic_big_empty_alerts" VerticalOptions="FillAndExpand" />
+                <Label Text="{Binding NoAlertsTitle}" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" VerticalOptions="Center" />
+                <Label Text="{Binding NoAlertsDescription}" HorizontalTextAlignment="Center" FontSize="17" VerticalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <ctrl:SwipeableListView VerticalOptions="Fill" HorizontalOptions="Fill"
+                                    SelectedItemCommand="{Binding SelectedItemCommand, Mode=TwoWay}"
+                                    LeftButtonCommand="{Binding ReadCommand}"
+                                    LeftButtonEnabled="true"
+                                    RightButtonEnabled="true"
+                                    RightButtonCommand="{Binding ArchiveCommand}"
+                                    Items="{Binding Notifications}"
+                                    AutomationProperties.IsInAccessibleTree="False"
+                                    EmptyView="{x:Reference _stackLayout}" />
+
+            <Grid HorizontalOptions="Fill" VerticalOptions="CenterAndExpand" IsVisible="{Binding MarkAllAction.IsBusy}">
+                <ctrl:Ellipse HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" 
+                              HeightRequest="50" FillColor="{StaticResource BusyBackground}" />
+                <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsRunning="true" 
+                                   HeightRequest="40" WidthRequest="40" />
+            </Grid>
+            <Grid HorizontalOptions="Fill" VerticalOptions="CenterAndExpand" IsVisible="{Binding LoadNotificationData.IsBusy}">
+                <ctrl:Ellipse HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" 
+                              HeightRequest="50" FillColor="{StaticResource BusyBackground}" />
+                <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsRunning="true"
+                                   HeightRequest="40" WidthRequest="40" />
+            </Grid>
+        </Grid>
+    </views:BaseContentPage.Content>
+</views:BaseContentPage>

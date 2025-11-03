@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BiometricAuthenticationError" xml:space="preserve">
+		<value>Verificatie mislukt</value>
+	</data>
+	<data name="BiometricBiometricsFaceIDFooter" xml:space="preserve">
+		<value>Opgelet: Alle FACE ID vingerafdrukken die op dit apparaat zijn opgeslagen, kunnen gebruikt worden om in te loggen op uw account.</value>
+	</data>
+	<data name="BiometricBiometricsFingerPrintFooter" xml:space="preserve">
+		<value>Opgelet: Alle vingerafdrukken die op dit apparaat zijn opgeslagen, kunnen gebruikt worden om in te loggen op uw account.</value>
+	</data>
+	<data name="BiometricBiometricsTouchIDFooter" xml:space="preserve">
+		<value>Opgelet: Alle Touch ID vingerafdrukken die op dit apparaat zijn opgeslagen, kunnen gebruikt worden om in te loggen op uw account.</value>
+	</data>
+	<data name="BiometricErrorTitle" xml:space="preserve">
+		<value>Fout</value>
+	</data>
+	<data name="BiometricFaceIDEnableTitle" xml:space="preserve">
+		<value>Face ID inschakelen</value>
+	</data>
+	<data name="BiometricFaceIDError" xml:space="preserve">
+		<value>Inschakelen {0}</value>
+	</data>
+	<data name="BiometricFaceIDLoginTitle" xml:space="preserve">
+		<value>Aanmelden met Face ID</value>
+	</data>
+	<data name="BiometricFaceIDMessage" xml:space="preserve">
+		<value>Gebruik de volgende keer dat u zich aanmeldt uw Face ID voor snellere, gemakkelijkere en veiligere toegang tot uw account.</value>
+	</data>
+	<data name="BiometricFingerPrinEnableTitle" xml:space="preserve">
+		<value>Vingerafdruk inschakelen</value>
+	</data>
+	<data name="BiometricFingerPrintMessage" xml:space="preserve">
+		<value>Gebruik de volgende keer dat u zich aanmeldt uw vingerafdruk voor snellere, gemakkelijkere en veiligere toegang tot uw account.</value>
+	</data>
+	<data name="BiometricFingerPrinTitle" xml:space="preserve">
+		<value>Aanmelden met vingerafdruk</value>
+	</data>
+	<data name="BiometricNotAvailableTitle" xml:space="preserve">
+		<value>Het apparaat heeft geen biometrische methodes of pincode om in te loggen</value>
+	</data>
+	<data name="BiometricTouchIDDMessage" xml:space="preserve">
+		<value>Gebruik de volgende keer dat u zich aanmeldt uw Touch ID voor snellere, gemakkelijkere en veiligere toegang tot uw account.</value>
+	</data>
+	<data name="BiometricTouchIDEnableTitle" xml:space="preserve">
+		<value>Touch ID inschakelen</value>
+	</data>
+	<data name="BiometricTouchIDFirtsTimeTitle" xml:space="preserve">
+		<value>Bevestig nu uw vingerafdruk.</value>
+	</data>
+	<data name="BiometricUseTouchId" xml:space="preserve">
+		<value>Touch ID gebruiken</value>
+	</data>
+	<data name="BiometricUsePin" xml:space="preserve">
+		<value>Pincode gebruiken</value>
+	</data>
+	<data name="BiometricUseFingerprint" xml:space="preserve">
+		<value>Vingerafdruk gebruiken</value>
+	</data>
+	<data name="BiometricUseFaceId" xml:space="preserve">
+		<value>Face ID gebruiken</value>
+	</data>
+	<data name="BiometricFaceIDReason" xml:space="preserve">
+		<value>Probeer het opnieuw</value>
+	</data>
+	<data name="BiometricTouchIDTitle" xml:space="preserve">
+		<value>Scan uw vinger om door te gaan.</value>
+	</data>
+	<data name="BiometricTouchIDLoginTitle" xml:space="preserve">
+		<value>Aanmelden met Touch ID</value>
+	</data>
+	<data name="BiometricTryAgain" xml:space="preserve">
+		<value>Probeer het opnieuw</value>
+	</data>
+	<data name="BiometricTouchIDHint" xml:space="preserve">
+		<value>Aanraaksensor</value>
+	</data>
+	<data name="BiometricBiometricsNotNow" xml:space="preserve">
+		<value>Nu niet</value>
+	</data>
+</root>
