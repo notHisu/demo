@@ -338,7 +338,11 @@ namespace Xamarin.Forms.Clinical6.Core.ViewModels
             await _cacheService.ClearAll();
             await _cacheService.ClearAuthToken();
 
-            LanguageService.Instance.SetCurrentLanguage(currentLanguage);
+            if (LanguageService.Instance != null && currentLanguage != null)
+            {
+                LanguageService.Instance.SetCurrentLanguage(currentLanguage);
+            }
+
             await _cacheService.SaveSupportedLanguages(supportedLanguages);
             await _cacheService.SaveTranslations(translations);
 
