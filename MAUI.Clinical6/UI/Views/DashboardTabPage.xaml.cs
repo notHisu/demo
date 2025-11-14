@@ -6,6 +6,11 @@ using Xamarin.Forms.Clinical6.Core.Helpers;
 using Xamarin.Forms.Clinical6.Core.ViewModels;
 using Xamarin.Forms.Clinical6.UI.Services;
 using Xamarin.Forms.Clinical6.ViewModels;
+#if ANDROID
+using Android.Views;
+using AndroidX.CoordinatorLayout.Widget;
+using Google.Android.Material.BottomNavigation;
+#endif
 
 
 namespace Xamarin.Forms.Clinical6.Views
@@ -34,6 +39,15 @@ namespace Xamarin.Forms.Clinical6.Views
             InitializeComponent();
             Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(this, false);
 
+#if ANDROID
+            // Fix bottom padding when ToolbarPlacement is Bottom
+            // Remove the extra bottom padding that Android adds for bottom tabs
+            Padding = new Thickness(0, 0, 0, 0);
+
+            // Set this AFTER InitializeComponent
+            Loaded += OnDashboardTabPageLoaded;
+#endif
+
             var navigationService = new NavigationService();
 
             var alertPage = NavigationService.GetNewPage<AlertsViewModel>();
@@ -60,7 +74,7 @@ namespace Xamarin.Forms.Clinical6.Views
             menuPage = NavigationService.GetNewPage<AppMenuViewModel>();
             homePage = NavigationService.GetNewPage<MyTasksViewModel>();
 
-            if(DeviceInfo.Platform == DevicePlatform.Android)
+            if (DeviceInfo.Platform == DevicePlatform.Android)
             {
                 if (menuPage != null)
                 {
@@ -81,7 +95,7 @@ namespace Xamarin.Forms.Clinical6.Views
                     Children.Add(alertNavigationPage);
                 }
             }
-            else if(DeviceInfo.Platform == DevicePlatform.iOS)
+            else if (DeviceInfo.Platform == DevicePlatform.iOS)
             {
                 if (!MainService.Instance.HideAlertsSection)
                 {
@@ -95,7 +109,7 @@ namespace Xamarin.Forms.Clinical6.Views
                     homePage.AutomationId = "HomePageTab";
                     Children.Add(homePage);
                 }
-                
+
                 if (menuPage != null)
                 {
                     menuPage.AutomationId = "MenuPageTab";
@@ -126,6 +140,50 @@ namespace Xamarin.Forms.Clinical6.Views
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+#if ANDROID
+        private void OnDashboardTabPageLoaded(object sender, EventArgs e)
+        {
+            // Force layout update to remove padding
+            if (Handler?.PlatformView is ViewGroup viewGroup)
+            {
+                viewGroup.SetPadding(0, 0, 0, 0);
+                viewGroup.SetClipToPadding(false);
+
+                // Find and fix the BottomNavigationView padding
+                FixBottomNavigationPadding(viewGroup);
+            }
+        }
+
+        private void FixBottomNavigationPadding(ViewGroup viewGroup)
+        {
+            for (int i = 0; i < viewGroup.ChildCount; i++)
+            {
+                var child = viewGroup.GetChildAt(i);
+
+                if (child is BottomNavigationView bottomNav)
+                {
+                    // Remove window insets listener that adds padding
+                    bottomNav.SetOnApplyWindowInsetsListener(null);
+
+                    // Set padding to zero
+                    bottomNav.SetPadding(0, 0, 0, 0);
+
+                    // Remove any bottom margin
+                    if (bottomNav.LayoutParameters is ViewGroup.MarginLayoutParams marginParams)
+                    {
+                        marginParams.BottomMargin = 0;
+                        bottomNav.LayoutParameters = marginParams;
+                    }
+                }
+                else if (child is ViewGroup childGroup)
+                {
+                    // Recursively check child view groups
+                    FixBottomNavigationPadding(childGroup);
+                }
+            }
+        }
+#endif
 
         private void AlertPage_Appearing(object sender, EventArgs e)
         {
@@ -171,7 +229,7 @@ namespace Xamarin.Forms.Clinical6.Views
 
                 // Sync with actual flyout state before toggling
                 menuIsOpen = masterpage.IsPresented;
-                
+
                 // Toggle the flyout menu
                 masterpage.IsPresented = !menuIsOpen;
             }
@@ -207,7 +265,7 @@ namespace Xamarin.Forms.Clinical6.Views
                 // Keep menuIsOpen in sync with actual flyout state
                 menuIsOpen = masterpage.IsPresented;
                 Debug.WriteLine($"Flyout state changed: {menuIsOpen}");
-                
+
                 // Update menu view model
                 var menuPageType = NavigationService.GetPageType<AppMenuViewModel>();
                 var appMenuViewModel = Children.FirstOrDefault(p => p.GetType() == menuPageType)?.BindingContext as AppMenuViewModel;
