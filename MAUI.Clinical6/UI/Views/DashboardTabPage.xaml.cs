@@ -23,15 +23,16 @@ namespace Xamarin.Forms.Clinical6.Views
 
         private bool menuIsOpen = false;
         private int lastSelectedItemIndex;
+        private bool isHandlingMenuTab = false; // Guard flag to prevent recursive events
+        private Page menuPage;
+        private Page homePage;
+        private bool isSubscribedToFlyout = false;
         public event EventHandler<int> DashboardBadgeEvent;
 
         public DashboardTabPage()
         {
             InitializeComponent();
             Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(this, false);
-
-            //MainService.Instance.SessionTimedOutEvent -= MainService_SessionTimedOutEvent;
-            //MainService.Instance.SessionTimedOutEvent += MainService_SessionTimedOutEvent;
 
             var navigationService = new NavigationService();
 
@@ -56,8 +57,8 @@ namespace Xamarin.Forms.Clinical6.Views
             alertPage.Appearing -= AlertPage_Appearing;
             alertPage.Appearing += AlertPage_Appearing;
 
-            var menuPage = NavigationService.GetNewPage<AppMenuViewModel>();
-            var homePage = NavigationService.GetNewPage<MyTasksViewModel>();
+            menuPage = NavigationService.GetNewPage<AppMenuViewModel>();
+            homePage = NavigationService.GetNewPage<MyTasksViewModel>();
 
             if(DeviceInfo.Platform == DevicePlatform.Android)
             {
@@ -109,6 +110,10 @@ namespace Xamarin.Forms.Clinical6.Views
 
             CurrentPageChanged += (object sender, EventArgs e) =>
             {
+                // Guard against recursive event firing
+                if (isHandlingMenuTab)
+                    return;
+
                 ///adding this make sure alert tab updates on navigating to.
                 if (Children.IndexOf(CurrentPage) == 0)
                 {
@@ -121,15 +126,6 @@ namespace Xamarin.Forms.Clinical6.Views
             };
             NavigationPage.SetHasNavigationBar(this, false);
         }
-
-        /*private void MainService_SessionTimedOutEvent(object sender, bool e)
-        {
-            Navigation.PopModalAsync().GetAwaiter();
-            MenuOpenClose(false);
-            Navigation.PopToRootAsync().GetAwaiter();
-            var timeoutPage = NavigationService.GetPage<SessionTimeOutViewModel>();
-            Navigation.PushAsync(timeoutPage).GetAwaiter();
-        }*/
 
         private void AlertPage_Appearing(object sender, EventArgs e)
         {
@@ -158,7 +154,68 @@ namespace Xamarin.Forms.Clinical6.Views
                 return;
             }
 
-            MenuOpenClose(!menuIsOpen);
+            // Set the flag to prevent recursive event firing
+            isHandlingMenuTab = true;
+
+            // Get the masterpage
+            var masterpage = MainService.HomePage?.Value as DashboardMasterPage;
+            if (masterpage != null)
+            {
+                // Subscribe to IsPresentedChanged event if not already subscribed
+                if (!isSubscribedToFlyout)
+                {
+                    masterpage.IsPresentedChanged -= OnFlyoutIsPresentedChanged;
+                    masterpage.IsPresentedChanged += OnFlyoutIsPresentedChanged;
+                    isSubscribedToFlyout = true;
+                }
+
+                // Sync with actual flyout state before toggling
+                menuIsOpen = masterpage.IsPresented;
+                
+                // Toggle the flyout menu
+                masterpage.IsPresented = !menuIsOpen;
+            }
+
+            // Use Dispatcher to switch back to the last selected tab
+            // This ensures the UI update happens after the flyout state change
+            Dispatcher.Dispatch(() =>
+            {
+                try
+                {
+                    if (Children != null && Children.Count > lastSelectedItemIndex && lastSelectedItemIndex >= 0)
+                    {
+                        var nextPage = Children[lastSelectedItemIndex];
+                        if (nextPage != null)
+                        {
+                            CurrentPage = nextPage;
+                        }
+                    }
+                }
+                finally
+                {
+                    // Reset the flag AFTER the tab switch completes
+                    isHandlingMenuTab = false;
+                }
+            });
+        }
+
+        private void OnFlyoutIsPresentedChanged(object sender, EventArgs e)
+        {
+            var masterpage = sender as DashboardMasterPage;
+            if (masterpage != null)
+            {
+                // Keep menuIsOpen in sync with actual flyout state
+                menuIsOpen = masterpage.IsPresented;
+                Debug.WriteLine($"Flyout state changed: {menuIsOpen}");
+                
+                // Update menu view model
+                var menuPageType = NavigationService.GetPageType<AppMenuViewModel>();
+                var appMenuViewModel = Children.FirstOrDefault(p => p.GetType() == menuPageType)?.BindingContext as AppMenuViewModel;
+                if (appMenuViewModel != null)
+                {
+                    appMenuViewModel.IsMenuPresented = menuIsOpen;
+                }
+            }
         }
 
         public void MenuOpenClose(bool isPresented)
@@ -168,36 +225,25 @@ namespace Xamarin.Forms.Clinical6.Views
             if (masterpage == null)
                 return; // safely exit if masterpage is not ready
 
-            // Attach/detach event safely
-            if (masterpage != null)
+            // Subscribe to IsPresentedChanged event if not already subscribed
+            if (!isSubscribedToFlyout)
             {
-                masterpage.IsPresentedChanged -= HomePageIsPresentedChanged;
-                masterpage.IsPresentedChanged += HomePageIsPresentedChanged;
-
-                masterpage.IsPresented = isPresented;
+                masterpage.IsPresentedChanged -= OnFlyoutIsPresentedChanged;
+                masterpage.IsPresentedChanged += OnFlyoutIsPresentedChanged;
+                isSubscribedToFlyout = true;
             }
 
-            menuIsOpen = isPresented;
-
-            // Safely set CurrentPage
-            if (Children != null && Children.Count > lastSelectedItemIndex && lastSelectedItemIndex >= 0)
-            {
-                var nextPage = Children[lastSelectedItemIndex];
-                if (nextPage != null)
-                    CurrentPage = nextPage;
-            }
+            masterpage.IsPresented = isPresented;
         }
-
 
         void HomePageIsPresentedChanged(object sender, EventArgs e)
         {
-            var masterpage = MainService.HomePage.Value as DashboardMasterPage;
+            var masterpage = MainService.HomePage?.Value as DashboardMasterPage;
 
-            if (masterpage is DashboardMasterPage)
-            {
-                FlyoutPage homePage = masterpage;
-                menuIsOpen = homePage.IsPresented;
-            }
+            if (masterpage == null)
+                return;
+
+            menuIsOpen = masterpage.IsPresented;
 
             var menuPageType = NavigationService.GetPageType<AppMenuViewModel>();
             var appMenuViewModel = Children.FirstOrDefault(p => p.GetType() == menuPageType)?.BindingContext as AppMenuViewModel;
@@ -205,8 +251,6 @@ namespace Xamarin.Forms.Clinical6.Views
             {
                 appMenuViewModel.IsMenuPresented = menuIsOpen;
             }
-
-            CurrentPage = Children[lastSelectedItemIndex];
         }
     }
 }

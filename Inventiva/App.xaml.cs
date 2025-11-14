@@ -95,8 +95,13 @@ namespace Inventiva
             MainService.Instance.IsAmazonPaymentsEnabled = false;
             MainService.Instance.AppResourceManager = Inventiva.Resources.AppResources.ResourceManager; // Setup client translations.
 
+            var dashboardMasterPage = new DashboardMasterPage();
+
+            // Store reference using Lazy<Page> for later access
+            MainService.HomePage = new Lazy<Page>(() => dashboardMasterPage);
+
             // Set FlyoutPage as MainPage
-            MainPage = new DashboardMasterPage();
+            MainPage = dashboardMasterPage;
         }
 
         public void SetLoggingConfig(string config)
