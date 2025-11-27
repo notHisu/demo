@@ -1,0 +1,1625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutTheStudyPageTitleText" xml:space="preserve">
+    <value>About The Study</value>
+    <comment>ModAbout</comment>
+  </data>
+  <data name="AboutTheStudyViewModelButtonOkText" xml:space="preserve">
+    <value>OK</value>
+    <comment>Action</comment>
+  </data>
+  <data name="AboutTheStudyViewModelErrorHeader" xml:space="preserve">
+    <value>Error</value>
+    <comment>Error</comment>
+  </data>
+  <data name="AboutTheStudyViewModelErrorMessage" xml:space="preserve">
+    <value>No study info available</value>
+    <comment>Error</comment>
+  </data>
+  <data name="AccountLocked" xml:space="preserve">
+    <value>Account Locked</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="AccountLockedFailedAttempts" xml:space="preserve">
+    <value>Account locked because of too many failed sign-in attempts. Please contact MHPsupport@prahs.com.</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="ActionContinue" xml:space="preserve">
+    <value>CONTINUE</value>
+    <comment>Action</comment>
+  </data>
+  <data name="ActionRetry" xml:space="preserve">
+    <value>RETRY</value>
+    <comment>Action</comment>
+  </data>
+  <data name="AdobeSignDescription1" xml:space="preserve">
+    <value>You will need to provide your digital signature via Adobe Sign.</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="AdobeSignDescription2" xml:space="preserve">
+    <value>During this process we will ask you to provide a verification code 2 times:</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="AdobeSignDescription3" xml:space="preserve">
+    <value>once in order to view the form and once when you click to sign.</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="AdobeSignDescription4" xml:space="preserve">
+    <value>Before you sign, please be sure you fully understand what you are consenting to. If you have any questions, please contact your study doctor.</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="AdobeSignText" xml:space="preserve">
+    <value>Adobe Sign</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="Agree" xml:space="preserve">
+    <value>Agree</value>
+    <comment>Action</comment>
+  </data>
+  <data name="AgreementValidationErrorMessage" xml:space="preserve">
+    <value>You must accept the e-agreement before continuing.</value>
+    <comment>Legacy_TermsOfUseViewModel</comment>
+  </data>
+  <data name="AgreementValidationErrorTitle" xml:space="preserve">
+    <value>Unable to Continue</value>
+    <comment>Legacy_TermsOfUseViewModel</comment>
+  </data>
+  <data name="AlertsListHelpText" xml:space="preserve">
+    <value>This is the alerts list</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="AlertsText" xml:space="preserve">
+    <value>Alerts</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="AmazonBalanceLabelDesc" xml:space="preserve">
+    <value>My balance:</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonBalanceRedeemButtonText" xml:space="preserve">
+    <value>Redeem</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentConfirmNetworkErrorSubTitle" xml:space="preserve">
+    <value>There was an issue processing your request. Please try again.</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentConfirmNetworkErrorTitle" xml:space="preserve">
+    <value>The Request Has Failed</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentConfirmRedeemAmountDesc" xml:space="preserve">
+    <value>Redeem Full Amount</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentConfirmRedeemBalanceCardDesc" xml:space="preserve">
+    <value>My Amazon Gift Card Balance</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentConfirmRedeemBalanceDesc" xml:space="preserve">
+    <value>Redeem Full Balance</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentConfirmRedeemButtonText" xml:space="preserve">
+    <value>Confirm</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentFinishButtonText" xml:space="preserve">
+    <value>Finish</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentFinishDesc" xml:space="preserve">
+    <value>Amazon Gift Card Requested!</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentFinishSubDesc" xml:space="preserve">
+    <value>Your Amazon gift card request is being processed. Once successful, the code will be sent directly to your email. If you have any questions, please contact your study site.</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentRedeemBalanceCardDesc" xml:space="preserve">
+    <value>My Amazon Gift Card Balance</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentRedeemBalanceDesc" xml:space="preserve">
+    <value>Redeem Full Balance</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AmazonPaymentsNavRedeemTitle" xml:space="preserve">
+    <value>Redeem Payments</value>
+    <comment>ModAmazon</comment>
+  </data>
+  <data name="AppInitViewModelGenerateTokenError" xml:space="preserve">
+    <value>Authentication token was not generated</value>
+    <comment>Error</comment>
+  </data>
+  <data name="AppInitViewModelMagicLinkTokenError" xml:space="preserve">
+    <value>Authentication token was not generated for use with magic link</value>
+    <comment>Error</comment>
+  </data>
+  <data name="AppointmentsPageNoUpcomingAppointments" xml:space="preserve">
+    <value>No Upcoming Appointments</value>
+    <comment>ModAppointments</comment>
+  </data>
+  <data name="AppointmentsPageNoUpcomingAppointmentsBody" xml:space="preserve">
+    <value>You have no upcoming appointments at this time.</value>
+    <comment>ModAppointments</comment>
+  </data>
+  <data name="AppointmentsPageNoUpcomingAppointmentsExtra" xml:space="preserve">
+    <value>Please contact your site to schedule your next study appointment.</value>
+    <comment>ModAppointments</comment>
+  </data>
+  <data name="AppointmentsPageTitleText" xml:space="preserve">
+    <value>Appointments</value>
+    <comment>ModAppointments</comment>
+  </data>
+  <data name="AppointmentsPageUpcomingAppointments" xml:space="preserve">
+    <value>UPCOMING APPOINTMENT</value>
+    <comment>ModAppointments</comment>
+  </data>
+  <data name="ArchivedText" xml:space="preserve">
+    <value>Archived</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="ArchiveText" xml:space="preserve">
+    <value>Archive</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="ArticlesPageTitleText" xml:space="preserve">
+    <value>Articles</value>
+    <comment>ModArticles</comment>
+  </data>
+  <data name="ArticlesViewModelButtonOkText" xml:space="preserve">
+    <value>OK</value>
+    <comment>Action</comment>
+  </data>
+  <data name="ArticlesViewModelErrorHeader" xml:space="preserve">
+    <value>Error</value>
+    <comment>Error</comment>
+  </data>
+  <data name="ArticlesViewModelErrorMessage" xml:space="preserve">
+    <value>No articles available to view at this time</value>
+    <comment>ModArticles</comment>
+  </data>
+  <data name="BeginEsignatureProcessText" xml:space="preserve">
+    <value>Begin eSignature Process</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="BiometricAuthenticationError" xml:space="preserve">
+    <value>Authentication Failed</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricBiometricsFaceIDFooter" xml:space="preserve">
+    <value>Attention: All of the Face ID fingerprints stored on this device can be used to log into your account.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricBiometricsFingerPrintFooter" xml:space="preserve">
+    <value>Attention: All of the Finger Print stored on this device can be used to log into your account.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricBiometricsNotNow" xml:space="preserve">
+    <value>Not Now</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricBiometricsTouchIDFooter" xml:space="preserve">
+    <value>Attention: All of the Touch ID fingerprints stored on this device can be used to log into your account.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricErrorTitle" xml:space="preserve">
+    <value>Biometrics Login Unavailable</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFaceIDEnableTitle" xml:space="preserve">
+    <value>Enable Face ID</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFaceIDError" xml:space="preserve">
+    <value>Enable {0}</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFaceIDLoginTitle" xml:space="preserve">
+    <value>Face ID Login</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFaceIDMessage" xml:space="preserve">
+    <value>Next time you are logging in, use your Face ID for faster, easier, and secure access to your account.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFaceIDReason" xml:space="preserve">
+    <value>Try Again</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFingerPrinEnableTitle" xml:space="preserve">
+    <value>Enable Fingerprint</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFingerPrinTitle" xml:space="preserve">
+    <value>Fingerprint Login</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFingerPrintMessage" xml:space="preserve">
+    <value>Next time you are logging in, use your fingerprint for faster, easier, and secure access to your account.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricFingerPrintScanRecognized" xml:space="preserve">
+    <value>Fingerprint recognized</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricNotAvailableTitle" xml:space="preserve">
+    <value>Biometrics recognition (Face ID/ Fingerprint ID) is not available on this device</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricSignFingerPrintTitle" xml:space="preserve">
+    <value>Fingerprint for {0}</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricSignTitle" xml:space="preserve">
+    <value>Sign in to {0}</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTitle" xml:space="preserve">
+    <value>Biometrics Login Unavailable</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTouchIDDMessage" xml:space="preserve">
+    <value>Next time you are logging in, use your Touch ID for faster, easier, and secure access to your account.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTouchIDEnableTitle" xml:space="preserve">
+    <value>Enable Touch ID</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTouchIDFirtsTimeTitle" xml:space="preserve">
+    <value>Confirm your fingerprint now.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTouchIDHint" xml:space="preserve">
+    <value>Touch Sensor</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTouchIDLoginTitle" xml:space="preserve">
+    <value>Touch ID Login</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTouchIDTitle" xml:space="preserve">
+    <value>Scan your finger to proceed.</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricTryAgain" xml:space="preserve">
+    <value>Try Again</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricUseFaceId" xml:space="preserve">
+    <value>Enable Face ID </value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricUseFingerprint" xml:space="preserve">
+    <value>Enable Fingerprint</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricUsePin" xml:space="preserve">
+    <value>Enable PIN</value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="BiometricUseTouchId" xml:space="preserve">
+    <value>Enable Touch ID </value>
+    <comment>ModBiometric</comment>
+  </data>
+  <data name="CompletedHistoryFlowProcessPageBackButtonText" xml:space="preserve">
+    <value>Back</value>
+    <comment>Action</comment>
+  </data>
+  <data name="ConsentCompletedDescription" xml:space="preserve">
+    <value>You have completed your part of the consent process.</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="ConsentErrorPhoneMessage" xml:space="preserve">
+    <value>Invalid phone number detected. Please contact the study team and ask them to update the phone number to continue.</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="ConsentErrorPhoneTitle" xml:space="preserve">
+    <value>Invalid Phone Number</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="ConsentNotComplete" xml:space="preserve">
+    <value>Consent is not complete</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="ConsentRequestedImageHelpText" xml:space="preserve">
+    <value>Consent Requested Icon</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="ContactDetailsPageContactTypeText" xml:space="preserve">
+    <value>Contact Type</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactDetailsPageEmailText" xml:space="preserve">
+    <value>Email</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactDetailsPageFaxText" xml:space="preserve">
+    <value>Fax</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactDetailsPageMoreInfoText" xml:space="preserve">
+    <value>*Please call or email for updated hours, information or for any further questions.</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactDetailsPageNameText" xml:space="preserve">
+    <value>Name</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactDetailsPagePhoneText" xml:space="preserve">
+    <value>Phone Number</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactDetailsPagePrimaryContactText" xml:space="preserve">
+    <value>Primary Contact</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactDetailsPageTitleText" xml:space="preserve">
+    <value>Contact</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactPagePrimaryContactText" xml:space="preserve">
+    <value>Primary Contact</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactPageTitleText" xml:space="preserve">
+    <value>Contact</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="ContactPageViewText" xml:space="preserve">
+    <value>View</value>
+    <comment>Action</comment>
+  </data>
+  <data name="ControlTemperature" xml:space="preserve">
+    <value>Temperature</value>
+    <comment>ModControls</comment>
+  </data>
+  <data name="ControlTemperatureC" xml:space="preserve">
+    <value>Celsius</value>
+    <comment>ModControls</comment>
+  </data>
+  <data name="ControlTemperatureF" xml:space="preserve">
+    <value>Fahrenheit</value>
+    <comment>ModControls</comment>
+  </data>
+  <data name="CreatePinConfirmationEntryPlaceholder" xml:space="preserve">
+    <value>Confirm 6 Digit PIN</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="CreatePinEntryInstructions" xml:space="preserve">
+    <value>Please be sure to remember this information. You will be asked to enter your PIN next time you enter the app.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="CreatePinEntryPlaceholder" xml:space="preserve">
+    <value>New 6 Digit PIN</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="CreatePinEntryTitle" xml:space="preserve">
+    <value>Create a new 6 digit PIN</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="CreatePinErrorDialogTitle" xml:space="preserve">
+    <value>Unable to create PIN</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="CreatePinMismatchErrorDialogMessage" xml:space="preserve">
+    <value>Your PIN numbers do not match. Please try again.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="CreatePinMismatchErrorDialogTitle" xml:space="preserve">
+    <value>PINs Mismatch</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="DashboardMasterPageHomeText" xml:space="preserve">
+    <value>Home</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="DashboardMasterPageMenuText" xml:space="preserve">
+    <value>Menu</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="DashboardViewModelDialogErrorHeader" xml:space="preserve">
+    <value>Error</value>
+    <comment>Error</comment>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>DELETE</value>
+    <comment>Action</comment>
+  </data>
+  <data name="DialogCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Action</comment>
+  </data>
+  <data name="DialogContinue" xml:space="preserve">
+    <value>Continue</value>
+    <comment>Action</comment>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+    <comment>Action</comment>
+  </data>
+  <data name="DialogQuit" xml:space="preserve">
+    <value>Quit</value>
+    <comment>Action</comment>
+  </data>
+  <data name="DisabledAccountPageAccountContactInfoText" xml:space="preserve">
+    <value>Your account has been disabled. Please contact your study site.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="DisabledAccountPageDisabledAccountText" xml:space="preserve">
+    <value>Disabled Account</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="DisabledImageHelpText" xml:space="preserve">
+    <value>Disabled Icon</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="DownloadTitle" xml:space="preserve">
+    <value>Update App!</value>
+    <comment>Action</comment>
+  </data>
+  <data name="eDiariesListHelpText" xml:space="preserve">
+    <value>This is the eDiaries list</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>EDIT</value>
+    <comment>Action</comment>
+  </data>
+  <data name="EligibilityDescriptionText" xml:space="preserve">
+    <value>The study coordinators are in the process of reviewing your records. They will soon know if you are a good fit for this study. If you would like more information, please contact your site.</value>
+    <comment>ModEligibility</comment>
+  </data>
+  <data name="EligibilityPendingText" xml:space="preserve">
+    <value>Eligibility pending</value>
+    <comment>ModEligibility</comment>
+  </data>
+  <data name="EligibilityStatusText" xml:space="preserve">
+    <value>ELIGIBILITY STATUS</value>
+    <comment>ModEligibility</comment>
+  </data>
+  <data name="EmailEntryEmailAddressLabel" xml:space="preserve">
+    <value>Enter your previously registered email address.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailEntryInvalidEmailMessage" xml:space="preserve">
+    <value>We do not recognize this email address. Please enter your previously registered email address.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailEntryInvalidEmailTitle" xml:space="preserve">
+    <value>Invalid Email</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailEntryPageNewEmailText" xml:space="preserve">
+    <value>New Email</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailEntryText" xml:space="preserve">
+    <value>Email Entry</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailEntryViewModelAccountDisabledMsg" xml:space="preserve">
+    <value>Your account has been disabled. Please contact your Site coordinator.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailImageHelpText" xml:space="preserve">
+    <value>Email Icon</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="EmailInformedConsentDescription" xml:space="preserve">
+    <value>We will email you the signed informed consent once the study staff has signed as well.</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="EmailPMAPageEmailHelpText" xml:space="preserve">
+    <value>This is a Text Box for the Email, Double tap to edit</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="EmailPMAPageEmailPlaceholder" xml:space="preserve">
+    <value>Email *</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="EmailPMAPageForgotPasswordText" xml:space="preserve">
+    <value>Forgot Password?</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="EmailPMAPageForgotPasswordTextHelpText" xml:space="preserve">
+    <value>Double Tap to active</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="EmailPMAPageLabelSignInHeader" xml:space="preserve">
+    <value>Participant Sign In</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="EmailPMAPagePasswordHelpText" xml:space="preserve">
+    <value>This is a Text Box for the Password, Double tap to edit</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="EmailPMAPagePasswordPlaceholder" xml:space="preserve">
+    <value>Password *</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="EmailPMAPagePasswordTextBoxErrorMsg" xml:space="preserve">
+    <value>Password is required.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="EmailPMAPagePrivacyLinkText" xml:space="preserve">
+    <value>Privacy</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="EmailPMAPageSignInBtnText" xml:space="preserve">
+    <value>Sign In</value>
+    <comment>Action</comment>
+  </data>
+  <data name="EmailSubjectText" xml:space="preserve">
+    <value>Email to Study Team</value>
+    <comment>ModContact</comment>
+  </data>
+  <data name="EmailVerificationCodeDialogMessage" xml:space="preserve">
+    <value>8 digit verification code was sent to your email address. Please verify the email to continue in the app.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailVerificationCodeDialogTitle" xml:space="preserve">
+    <value>Verification Code</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailVerificationCodeEntryInstructions" xml:space="preserve">
+    <value>Enter the Verification Code number we sent to your registered email, along with your email address.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailVerificationEntryInstructions" xml:space="preserve">
+    <value>8 digit verification code was sent to your email address. Please verify the email to continue in the app.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailVerificationEntryTitle" xml:space="preserve">
+    <value>Enter Verification Code</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailVerificationErrorDialogMessage" xml:space="preserve">
+    <value>The invalid verification code has been entered. Please try again.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EmailVerificationErrorDialogTitle" xml:space="preserve">
+    <value>Alert!</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="ErrorMessageFriendly" xml:space="preserve">
+    <value>Something went wrong!</value>
+    <comment>Error</comment>
+  </data>
+  <data name="ErrorMessageRetry" xml:space="preserve">
+    <value>Something went wrong. Please try again.</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="EsignatureCompleteText" xml:space="preserve">
+    <value>eSignature Complete!</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="ExpiredImageHelpText" xml:space="preserve">
+    <value>Expired Icon</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="ExternalOAuthRefreshTokenAuthorizedBodyText" xml:space="preserve">
+    <value>We are receiving data from your {0}.</value>
+    <comment>ModExternalOAuth</comment>
+  </data>
+  <data name="ExternalOAuthRefreshTokenAuthorizedTitleText" xml:space="preserve">
+    <value>{0} account is authorized</value>
+    <comment>ModExternalOAuth</comment>
+  </data>
+  <data name="ExternalOAuthRefreshTokenUnauthorizedBodyText" xml:space="preserve">
+    <value>Please tap the button below to authorize your {0} account, so that we can start tracking your data.</value>
+    <comment>ModExternalOAuth</comment>
+  </data>
+  <data name="ExternalOAuthRefreshTokenUnauthorizedButtonText" xml:space="preserve">
+    <value>Authorize {0}</value>
+    <comment>ModExternalOAuth</comment>
+  </data>
+  <data name="ExternalOAuthRefreshTokenUnauthorizedTitleText" xml:space="preserve">
+    <value>{0} account is not authorized</value>
+    <comment>ModExternalOAuth</comment>
+  </data>
+  <data name="FingerprintNotRecognized" xml:space="preserve">
+    <value>Fingerprint not recognized
+ Try again</value>
+    <comment>GW</comment>
+  </data>
+  <data name="FinishText" xml:space="preserve">
+    <value>Finish</value>
+    <comment>Action</comment>
+  </data>
+  <data name="FlowCompletedSurveyProcessViewModelNotAvailText" xml:space="preserve">
+    <value>Something went wrong. Please try again. </value>
+    <comment>Error</comment>
+  </data>
+  <data name="FlowDatePickerTitle" xml:space="preserve">
+    <value>'Date...'</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowFieldDatePickerExtendedEnterTime" xml:space="preserve">
+    <value>Enter Time</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowFieldDatePickerLabelEnterDate" xml:space="preserve">
+    <value>Enter Date</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowPickerTitle" xml:space="preserve">
+    <value>Choose one...</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowProcessInvalidStepsError" xml:space="preserve">
+    <value>Something went wrong. Please try again.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="FlowProcessMissingFirstStepError" xml:space="preserve">
+    <value>Something went wrong. Please try again.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="FlowProcessPageToolbarItemExitText" xml:space="preserve">
+    <value>Exit</value>
+    <comment>Action</comment>
+  </data>
+  <data name="FlowProcessSplashViewModelDateText" xml:space="preserve">
+    <value>Date:</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowProcessSplashViewModelTimeText" xml:space="preserve">
+    <value>Time</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowProcessViewModelOkText" xml:space="preserve">
+    <value>OK</value>
+    <comment>Action</comment>
+  </data>
+  <data name="FlowQuitDialogMessage" xml:space="preserve">
+    <value>You have not completed this activity. If you exit, your progress will be saved and later you can continue form where you stopped.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="FlowSaveDraftExit" xml:space="preserve">
+    <value>Exit Activity</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowSaveDraftStay" xml:space="preserve">
+    <value>Stay &amp; Complete</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowSaveDraftTitle" xml:space="preserve">
+    <value>You have not completed this activity. If you exit, your progress will be saved, and later you can continue from where you stopped.</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="FlowSurveyHistoryPageActivityHistoryText" xml:space="preserve">
+    <value>Activity History</value>
+    <comment>ModActivityHistory</comment>
+  </data>
+  <data name="FlowSurveyHistoryPageBackText" xml:space="preserve">
+    <value>Back</value>
+    <comment>Action</comment>
+  </data>
+  <data name="FlowValidationDialogMessage" xml:space="preserve">
+    <value>Please check that all required values have been entered correctly before proceeding.</value>
+    <comment>GW</comment>
+  </data>
+  <data name="FlowValidationDialogTitle" xml:space="preserve">
+    <value>Unable to Proceed</value>
+    <comment>GW</comment>
+  </data>
+  <data name="ForgotPinActivationCode" xml:space="preserve">
+    <value>Enter Verification Code</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinActivationCodePlaceHolder" xml:space="preserve">
+    <value>Verification Code</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailErrorBody" xml:space="preserve">
+    <value>We cannot find your email address in the system. Please re-enter your email address.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailErrorHeader" xml:space="preserve">
+    <value>Invalid Email</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailErrorMessage" xml:space="preserve">
+    <value>Please provide a valid Email</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailSent" xml:space="preserve">
+    <value>We sent an email with an verification code to {0}</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailSentLabel" xml:space="preserve">
+    <value>Please Check Your Email</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailSentPageCheckEmailText" xml:space="preserve">
+    <value>Check Your Email</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailSentPageEmailResetText" xml:space="preserve">
+    <value>An email to reset your password should arrive shortly. Please be sure to check your junk mail.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEmailSentPageGoToSignInText" xml:space="preserve">
+    <value>Go to Sign In</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailLabel" xml:space="preserve">
+    <value>Enter your Email Address</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailLine1" xml:space="preserve">
+    <value>We can send an verification code to your email to reset your PIN.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailLine2" xml:space="preserve">
+    <value>Please enter your email address and tap the Send button below.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailPageButtonSendLinkText" xml:space="preserve">
+    <value>Send Link</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailPageForgotPasswordText" xml:space="preserve">
+    <value>Forgot Password</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailPagePasswordChangeText" xml:space="preserve">
+    <value>I don’t need to change my password.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailPagePasswordChangeTextHelpText" xml:space="preserve">
+    <value>Double tap to activate</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="ForgotPinEnterEmailPageSendEmailText" xml:space="preserve">
+    <value>Enter the email you use to sign in, and we will send you a link to reset your password.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailViewModelEmailReqText" xml:space="preserve">
+    <value>Email is required.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="ForgotPinEnterEmailViewModelInvalidEmailText" xml:space="preserve">
+    <value>Invalid Email Format. Please enter a valid email.</value>
+    <comment>ModForgot</comment>
+  </data>
+  <data name="GoHome" xml:space="preserve">
+    <value>Go Home</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="GoVideoConsults" xml:space="preserve">
+    <value>Go to Video Consults List</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="HistoryListHelpText" xml:space="preserve">
+    <value>This is the history list</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="HomeAllCaughtUp" xml:space="preserve">
+    <value>ALL CAUGHT UP</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomeKeepGreatWork" xml:space="preserve">
+    <value>Keep up the great work.</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomeKeepGreatWorkBody" xml:space="preserve">
+    <value>You have completed all activites at this time. You may have new activities coming up soon.</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomePageCheckBackText" xml:space="preserve">
+    <value>Check back everyday at 6pm to fill in your diary.</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomePageConsentDescription" xml:space="preserve">
+    <value>Once your study physician goes through the informed consent form and you provide your consent to participate in the study, you will be able to proceed.</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomePageNoPhoneCall" xml:space="preserve">
+    <value>Phone call can be made at the moment</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomeWeek" xml:space="preserve">
+    <value>Week {0} of {1}</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomeWelcome" xml:space="preserve">
+    <value>Welcome {0}</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomeYouHaveActivities" xml:space="preserve">
+    <value>You have {0} activities</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomeYouHaveActivity" xml:space="preserve">
+    <value>You have {0} activity</value>
+    <comment>GW</comment>
+  </data>
+  <data name="HomeYouHaveNoActivity" xml:space="preserve">
+    <value>You have {0} activity</value>
+    <comment>GW</comment>
+  </data>
+  <data name="InactiveAccountDescription" xml:space="preserve">
+    <value>Your account has been deactivated. Please contact your study site.</value>
+    <comment>GW</comment>
+  </data>
+  <data name="InactiveAccountText" xml:space="preserve">
+    <value>Inactive Account</value>
+    <comment>GW</comment>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Incorrect Password</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid Credentials</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="InvalidCredentialsBody" xml:space="preserve">
+    <value>Please refer to your invitation email for further instructions.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="InvalidCredentialsTitle" xml:space="preserve">
+    <value>Invalid Credentials</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Invalid Email</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="JoinConsult" xml:space="preserve">
+    <value>Tips</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="JoinTitle" xml:space="preserve">
+    <value>Join</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+    <comment>Action</comment>
+  </data>
+  <data name="LockedImageHelpText" xml:space="preserve">
+    <value>Locked Icon</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="LockedPageCheckEmailText" xml:space="preserve">
+    <value>Check your email for instructions to unlock your account</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LockedPageFailedAttemptsText" xml:space="preserve">
+    <value>Your account has been locked because of too many failed sign in attempts. To unlock your account, you can do one of the following things:</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LockedPageLockAccountText" xml:space="preserve">
+    <value>Locked Account</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LockedPageResetPasswordText" xml:space="preserve">
+    <value>Reset your password</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LockedPageReturnToSignInText" xml:space="preserve">
+    <value>Return to Sign In</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LockedPageWaitTimeLimitText" xml:space="preserve">
+    <value>Wait 15 minutes before trying again, or</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LoginFlowLogIn" xml:space="preserve">
+    <value>LOG IN</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="LoginFlowNext" xml:space="preserve">
+    <value>NEXT</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="LoginPMAViewModelAlertHeaderText" xml:space="preserve">
+    <value>Invalid Credentials</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LoginPMAViewModelEmailReqText" xml:space="preserve">
+    <value>Email is required.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LoginPMAViewModelInvalidEmailText" xml:space="preserve">
+    <value>Invalid Email Format. Please enter a valid email.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LoginPMAViewModelRemainingAtemptText" xml:space="preserve">
+    <value>Attempts remaining:</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LoginPMAViewModelRemainingAtemptTextBody" xml:space="preserve">
+    <value>Your account may be locked after 3 failed sign in attempts.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log Out</value>
+    <comment>Action</comment>
+  </data>
+  <data name="MarkUnreadText" xml:space="preserve">
+    <value>Mark as Unread</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="MenuListHelpText" xml:space="preserve">
+    <value>This is the menu list</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="MenuPageCopyrightText" xml:space="preserve">
+    <value>© 2019 Clinical6 PRA Health Sciences</value>
+    <comment>Status</comment>
+  </data>
+  <data name="MenuPageSignOutText" xml:space="preserve">
+    <value>Sign Out</value>
+    <comment>Action</comment>
+  </data>
+  <data name="MenuPageTitleText" xml:space="preserve">
+    <value>More</value>
+    <comment>Action</comment>
+  </data>
+  <data name="MyTasksHeaderGreetingText" xml:space="preserve">
+    <value>WELCOME {0}</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksHeaderRemainingActivitiesText" xml:space="preserve">
+    <value>You have {0:activity;activities}</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksHeaderTitleTextScreening" xml:space="preserve">
+    <value>Screening</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksHeaderTitleTextWaiting" xml:space="preserve">
+    <value>Waiting for Next Step</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksPageTitleText" xml:space="preserve">
+    <value>Home</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksReconsentBody" xml:space="preserve">
+    <value>Please contact your site to get instructions on how to re-consent.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksReconsentTitle" xml:space="preserve">
+    <value>We need your re-consent</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardAddressFormat" xml:space="preserve">
+    <value>{0}
+            {1}
+            {2}, {3} {4}
+            {5}
+            {6}
+            {7}</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteAssignedBody" xml:space="preserve">
+    <value>In the mean time, you can view your entire study schedule by tapping the "More" menu below.  You may have new tasks coming up soon.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteAssignedLabel" xml:space="preserve">
+    <value>ALL CAUGHT UP</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteAssignedTitle" xml:space="preserve">
+    <value>Keep up the great work!</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteUnassignedBody" xml:space="preserve">
+    <value>In order to use be assigned tasks, you must first belong to a study step.  Please wait while your Site User assigns you to a study step.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteUnassignedLabel" xml:space="preserve">
+    <value>WAITING FOR FIRST STEP</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteUnassignedTitle" xml:space="preserve">
+    <value>We are waiting for your step assignment</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentInitialBody" xml:space="preserve">
+    <value>In order to use this app, we need your consent.  Please use the information below to contact your site and get instructions on how to provide your consent.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentInitialLabel" xml:space="preserve">
+    <value>CONSENT</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentInitialTitle" xml:space="preserve">
+    <value>We Need Your Consent</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentInProgressBody" xml:space="preserve">
+    <value>In order to use this app, your consent needs to be approved.  Please wait for the approval.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentInProgressLabel" xml:space="preserve">
+    <value>CONSENT</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardConsentInProgressTitle" xml:space="preserve">
+    <value>We are waiting for consent approval</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardDefaultButtonText" xml:space="preserve">
+    <value>Go</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardRemoteConsentInProgressBody" xml:space="preserve">
+    <value>We will notify you once the site staff signs your consent, and you can start using the {0} app.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardRemoteConsentInProgressLabel" xml:space="preserve">
+    <value>SIGN CONSENT FORM</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusCardRemoteConsentInProgressTitle" xml:space="preserve">
+    <value>Thank you for completing the eSignature process</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusRemoteConsentBody" xml:space="preserve">
+    <value>In order to use the {0} app, we'll need your consent first.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusRemoteConsentBodyRe" xml:space="preserve">
+    <value>We have made changes to the informed consent. In order to continue participating, we need you to sign the informed consent again.</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusRemoteConsentLabel" xml:space="preserve">
+    <value>SIGN CONSENT FORM</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusRemoteConsentLabelRe" xml:space="preserve">
+    <value>RE-CONSENT</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusRemoteConsentTitle" xml:space="preserve">
+    <value>We need your eSignature</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksStatusRemoteConsentTitleRe" xml:space="preserve">
+    <value>We need your re-consent</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="MyTasksTitle" xml:space="preserve">
+    <value>My Tasks</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="NavActionBack" xml:space="preserve">
+    <value>Back</value>
+    <comment>Action</comment>
+  </data>
+  <data name="NavActionDone" xml:space="preserve">
+    <value>Done</value>
+    <comment>Action</comment>
+  </data>
+  <data name="NewVersionAvailableMessage" xml:space="preserve">
+    <value>There is a newer version of the mobile app available for download from the app store.</value>
+    <comment>Status</comment>
+  </data>
+  <data name="NewVersionAvailableTitle" xml:space="preserve">
+    <value>New app version available</value>
+    <comment>Status</comment>
+  </data>
+  <data name="NoAlertsArchivedText" xml:space="preserve">
+    <value>No Archived Alerts</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="NoAlertsDescription" xml:space="preserve">
+    <value>There are no new alerts yet.</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="NoAlertsTitle" xml:space="preserve">
+    <value>No Alerts</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="NoFlowStepsMessage" xml:space="preserve">
+    <value>There are no saved activities to view at this time.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="NoInternetErrorMessage" xml:space="preserve">
+    <value>Please connect to the internet and press the "Retry" button.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="NoInternetErrorMessage2" xml:space="preserve">
+    <value>Please connect to the internet and try signing in to the app again.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="NoInternetErrorTitle" xml:space="preserve">
+    <value>No Internet Connection</value>
+    <comment>Error</comment>
+  </data>
+  <data name="NoInternetPageTitle" xml:space="preserve">
+    <value>No internet!</value>
+    <comment>Error</comment>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Not Available</value>
+    <comment>Error</comment>
+  </data>
+  <data name="NotAvailableMessage" xml:space="preserve">
+    <value>There are no scheduled video consults yet.</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="NoVideoConsultsText" xml:space="preserve">
+    <value>No Video Consults</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="OkTitle" xml:space="preserve">
+    <value>OK</value>
+    <comment>GW</comment>
+  </data>
+  <data name="OnceStudyStaffConfirms" xml:space="preserve">
+    <value>Once the study staff confirms your alegibility and counter signs the consent, we will email you the signed copy of your consent form(s) and you will be able to access the mobile app.</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="PageTitleLogin" xml:space="preserve">
+    <value>Log in</value>
+    <comment>Action</comment>
+  </data>
+  <data name="PasswordExpired" xml:space="preserve">
+    <value>Password Expired</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="PasswordExpiredPagePasswordExpiredLabelText" xml:space="preserve">
+    <value>Password Expired</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="PasswordExpiredPagePasswordExpiredText" xml:space="preserve">
+    <value>Your password has expired. Please click the button below and follow the instructions to change your password.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="PasswordExpiredPageResetPasswordText" xml:space="preserve">
+    <value>Reset Password</value>
+    <comment>GW</comment>
+  </data>
+  <data name="PasswordYouEnteredIncorrect" xml:space="preserve">
+    <value>The password you entered is incorrect. Please try again.</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="PatientIdText" xml:space="preserve">
+    <value>Patient ID</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="PinActionContinue" xml:space="preserve">
+    <value>LOG IN</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="PinEntryPageForgotPinText" xml:space="preserve">
+    <value>I Forgot My 6 Digit PIN Number</value>
+    <comment>Legacy</comment>
+  </data>
+  <data name="PoliciesPageContinueButtonText" xml:space="preserve">
+    <value>Continue</value>
+    <comment>Action</comment>
+  </data>
+  <data name="PoliciesPagePolicyAcceptNewText" xml:space="preserve">
+    <value>I accept the new</value>
+    <comment>ModPolicies</comment>
+  </data>
+  <data name="PoliciesPagePolicyChangedText" xml:space="preserve">
+    <value>Our policies have changed. Please review and accept the new policies in order to continue.</value>
+    <comment>ModPolicies</comment>
+  </data>
+  <data name="PoliciesPagePolicyUpdatedText" xml:space="preserve">
+    <value>Policy Update</value>
+    <comment>ModPolicies</comment>
+  </data>
+  <data name="PoliciesPagePrivacyPolicyText" xml:space="preserve">
+    <value>Privacy</value>
+    <comment>ModPolicies</comment>
+  </data>
+  <data name="PolicyImageHelpText" xml:space="preserve">
+    <value>Policy Icon</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="PolicyPageCloseText" xml:space="preserve">
+    <value>Close</value>
+    <comment>Action</comment>
+  </data>
+  <data name="ProfileViewModelDialogErrorHeaderText" xml:space="preserve">
+    <value>Error</value>
+    <comment>Error</comment>
+  </data>
+  <data name="ProfileViewModelNewTimeZoneText" xml:space="preserve">
+    <value>Your app time zone has been updated</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="ProfileViewModelOkText" xml:space="preserve">
+    <value>OK</value>
+    <comment>Action</comment>
+  </data>
+  <data name="ProfileViewModelTimeZoneNotUpdatedText" xml:space="preserve">
+    <value>Something went wrong and the app time zone was not updated. Please try again later.</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="ProfileViewModelTitleText" xml:space="preserve">
+    <value>My Profile</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="ProfileViewModelUpdateTimeZoneText" xml:space="preserve">
+    <value>Time Zone Updated</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="RadioButtonSelectedHelpText" xml:space="preserve">
+    <value>This answer is currently selected.</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="ReadText" xml:space="preserve">
+    <value>Read</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="ReconsentRequested" xml:space="preserve">
+    <value>Your re-consent is requested</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="ReEnterCorrectAnswers" xml:space="preserve">
+    <value>You are currently employed but entered 0 hours for all the questions 2, 3 and 4. Please re-enter the correct answers.</value>
+    <comment>FlowProcess</comment>
+  </data>
+  <data name="RegisteredEmailText" xml:space="preserve">
+    <value>Registered Email</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="RemoteConsentTitle" xml:space="preserve">
+    <value>Sign Informed Consent</value>
+    <comment>ModRemoteConsent</comment>
+  </data>
+  <data name="SessionTimeOutPageEmailPlaceHolderText" xml:space="preserve">
+    <value>Email *</value>
+    <comment>ModSessionTimeOut</comment>
+  </data>
+  <data name="SessionTimeOutPageForgotPasswordText" xml:space="preserve">
+    <value>Forgot Password?</value>
+    <comment>ModSessionTimeOut</comment>
+  </data>
+  <data name="SessionTimeOutPageHeaderText" xml:space="preserve">
+    <value>Session Timeout</value>
+    <comment>ModSessionTimeOut</comment>
+  </data>
+  <data name="SessionTimeOutPageHeaderTextSubtitle" xml:space="preserve">
+    <value>Your session expired due to inactivity.</value>
+    <comment>ModSessionTimeOut</comment>
+  </data>
+  <data name="SessionTimeOutPagePasswordPlaceHolderText" xml:space="preserve">
+    <value>Password *</value>
+    <comment>ModSessionTimeOut</comment>
+  </data>
+  <data name="SessionTimeOutPageSigInText" xml:space="preserve">
+    <value>Sign In</value>
+    <comment>Action</comment>
+  </data>
+  <data name="SignInErrorHelpText" xml:space="preserve">
+    <value>Sign in button is disabled. Please review input errors and try again.</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="SignInformedConsentText" xml:space="preserve">
+    <value>Sign Consent Form</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="SignInReadyHelpText" xml:space="preserve">
+    <value>Ready to sign in.</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="SiteIdText" xml:space="preserve">
+    <value>Site ID</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="SprayValidationError" xml:space="preserve">
+    <value>Last spray time cannot be earlier than first spray time</value>
+    <comment>GW</comment>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>Start</value>
+    <comment>Action</comment>
+  </data>
+  <data name="StudyLogoHelpText" xml:space="preserve">
+    <value>Clinical 6 Logo</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="StudyStartDateText" xml:space="preserve">
+    <value>Study Start Date</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="TasksText" xml:space="preserve">
+    <value>Tasks</value>
+    <comment>ModDashboard</comment>
+  </data>
+  <data name="TheSiteHasNotCompleted" xml:space="preserve">
+    <value>The site has not completed your paper consent process yet. Once you are marked as consented, you will be able to access the mobile app.</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="TimeEntryValidationError" xml:space="preserve">
+    <value>Please enter a time between {0} - {1}</value>
+    <comment>GW</comment>
+  </data>
+  <data name="TypeHere" xml:space="preserve">
+    <value>Type Here</value>
+    <comment>Action</comment>
+  </data>
+  <data name="UnArchiveKey" xml:space="preserve">
+    <value>Unarchive</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="UnreadText" xml:space="preserve">
+    <value>Unread</value>
+    <comment>ModAlerts</comment>
+  </data>
+  <data name="UserDeathInformatioTitle" xml:space="preserve">
+    <value>Death Information</value>
+    <comment>ModFlow</comment>
+  </data>
+  <data name="UserGuideText" xml:space="preserve">
+    <value>User Guide</value>
+    <comment>ModUserGuide</comment>
+  </data>
+  <data name="UserProfileFirstNameLabel" xml:space="preserve">
+    <value>First Name</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="UserProfileLastNameLabel" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>ModProfile</comment>
+  </data>
+  <data name="ValueMaxMessageError" xml:space="preserve">
+    <value>Your answer is not within the range of {0} - {1} Please try again.</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="VerificationCodeNext" xml:space="preserve">
+    <value>Next</value>
+    <comment>ModVerificationCode</comment>
+  </data>
+  <data name="VerificationCodePlaceHolder" xml:space="preserve">
+    <value>Verification Code *</value>
+    <comment>ModVerificationCode</comment>
+  </data>
+  <data name="VerificationCodeTitle" xml:space="preserve">
+    <value>Invalid verification code. Please try again.</value>
+    <comment>ModVerificationCode</comment>
+  </data>
+  <data name="VerificationCodeVerifyAccountMessage" xml:space="preserve">
+    <value>Enter the Verification Code you received in your email.</value>
+    <comment>ModVerificationCode</comment>
+  </data>
+  <data name="VerificationCodeVerifyAccountTitle" xml:space="preserve">
+    <value>Verify Account</value>
+    <comment>ModVerificationCode</comment>
+  </data>
+  <data name="VersionFormatText" xml:space="preserve">
+    <value>Version: {0}</value>
+    <comment>Status</comment>
+  </data>
+  <data name="VerticalSliderHealth" xml:space="preserve">
+    <value>HEALTH</value>
+    <comment>ModControls</comment>
+  </data>
+  <data name="VerticalSliderToday" xml:space="preserve">
+    <value>TODAY</value>
+    <comment>ModControls</comment>
+  </data>
+  <data name="VerticalSliderYour" xml:space="preserve">
+    <value>YOUR</value>
+    <comment>ModControls</comment>
+  </data>
+  <data name="VideoConsultBackAccept" xml:space="preserve">
+    <value>Leave</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoConsultBackCancel" xml:space="preserve">
+    <value>Stay in the Call</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoConsultBackMessage" xml:space="preserve">
+    <value>Leaving the call will end it. You may join the call again through the video consults menu as long as the other caller is still connected.</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoConsultBackTitle" xml:space="preserve">
+    <value>Leave Call?</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoConsultEnd" xml:space="preserve">
+    <value>This video consult has concluded.</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoConsultListPageTitleText" xml:space="preserve">
+    <value>Video Consults</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoConsultRoomPageCloseBtnText" xml:space="preserve">
+    <value>Close</value>
+    <comment>Action</comment>
+  </data>
+  <data name="VideoConsultRoomPageTitleText" xml:space="preserve">
+    <value>Video Consult</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoDescription" xml:space="preserve">
+    <value>Once a video consult is available to start, you will see a link to 'Join' right next to it.</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="VideoListHelpText" xml:space="preserve">
+    <value>This is the video list</value>
+    <comment>HelpText</comment>
+  </data>
+  <data name="VideoListTitle" xml:space="preserve">
+    <value>Videos</value>
+    <comment>ModVideos</comment>
+  </data>
+  <data name="VideoListViewModelErrorHeaderText" xml:space="preserve">
+    <value>Error</value>
+    <comment>Error</comment>
+  </data>
+  <data name="VideoListViewModelOkText" xml:space="preserve">
+    <value>OK</value>
+    <comment>Action</comment>
+  </data>
+  <data name="VideoListViewModelVideoErrorText" xml:space="preserve">
+    <value>Unable to load video(s) at this time. Please try again later.</value>
+    <comment>ModVideos</comment>
+  </data>
+  <data name="WaitingBeginConsult" xml:space="preserve">
+    <value>Joining video consult…</value>
+    <comment>ModVideoConsult</comment>
+  </data>
+  <data name="WithdrawnAccountPageInfoText" xml:space="preserve">
+    <value>You have been withdrawn from the app. If you have any questions, please contact your site.</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="WithdrawnAccountPageText" xml:space="preserve">
+    <value>Withdrawn Account</value>
+    <comment>ModLogin</comment>
+  </data>
+  <data name="YouConsentfFormsHaveChanged" xml:space="preserve">
+    <value>You consent forms(s) have changed and we need your re-consent. Please log in to the patient portal to re-consent.</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="YouHaveNotCompletedEconsent" xml:space="preserve">
+    <value>You have not completed the e-consent process. Please log in to the patient portal to complete the consent process.</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="YourAccountHasBeenDisabled" xml:space="preserve">
+    <value>Your account has been disabled. Please contact your study site.</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="YourConsentProcessInProgress" xml:space="preserve">
+    <value>Your consent process is in progress</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="YourConsentProcessIsComplete" xml:space="preserve">
+    <value>Your consent process is complete</value>
+    <comment>ModConsent</comment>
+  </data>
+  <data name="YourPasswordHasExpired" xml:space="preserve">
+    <value>Your password has expired. You must change it now.</value>
+    <comment>Legacy_PinEntryRenderViewModel</comment>
+  </data>
+  <data name="FlowProcessConfirmationSummaryButtonText" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="InitialScreeningIdText" xml:space="preserve">
+    <value>Initial Screening ID</value>
+    <comment>ModProfile</comment>
+  </data>
+</root>

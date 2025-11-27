@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BiometricAuthenticationError" xml:space="preserve">
+		<value>Error de autentificación</value>
+	</data>
+  <data name="BiometricBiometricsFaceIDFooter" xml:space="preserve">
+		<value>Atención: Todas las huellas dactilares y de reconocimiento facial almacenadas en este dispositivo se pueden utilizar para iniciar sesión en su cuenta.</value>
+	</data>
+  <data name="BiometricBiometricsFingerPrintFooter" xml:space="preserve">
+		<value>Atención: todas las huellas dactilares almacenadas en este dispositivo se pueden utilizar para iniciar sesión en su cuenta.</value>
+	</data>
+  <data name="BiometricBiometricsTouchIDFooter" xml:space="preserve">
+		<value>Atención: todas las huellas dactilares de Touch ID almacenadas en este dispositivo se pueden utilizar para iniciar sesión en su cuenta.</value>
+	</data>
+  <data name="BiometricErrorTitle" xml:space="preserve">
+		<value>Error</value>
+	</data>
+  <data name="BiometricFaceIDEnableTitle" xml:space="preserve">
+		<value>Habilitar Face ID</value>
+	</data>
+  <data name="BiometricFaceIDError" xml:space="preserve">
+		<value>Activar {0}</value>
+	</data>
+  <data name="BiometricFaceIDLoginTitle" xml:space="preserve">
+		<value>Inicio de sesión con ID</value>
+	</data>
+  <data name="BiometricFaceIDMessage" xml:space="preserve">
+		<value>La próxima vez que inicie sesión, utilice su Face ID para acceder a la cuenta de forma más rápida, sencilla y segura.</value>
+	</data>
+  <data name="BiometricFingerPrinEnableTitle" xml:space="preserve">
+		<value>Habilitar huella dactilar</value>
+	</data>
+  <data name="BiometricFingerPrintMessage" xml:space="preserve">
+		<value>La próxima vez que inicie sesión, utilice su huella dactilar para acceder a la cuenta de forma más rápida, sencilla y segura.</value>
+	</data>
+  <data name="BiometricFingerPrinTitle" xml:space="preserve">
+		<value>Inicio de sesión con huella dactilar</value>
+	</data>
+  <data name="BiometricNotAvailableTitle" xml:space="preserve">
+		<value>El dispositivo no tiene métodos biométricos ni PIN para iniciar sesión.</value>
+	</data>
+  <data name="BiometricTouchIDDMessage" xml:space="preserve">
+		<value>La próxima vez que inicie sesión, utilice su Touch ID para acceder a la cuenta de forma más rápida, sencilla y segura.</value>
+	</data>
+  <data name="BiometricTouchIDEnableTitle" xml:space="preserve">
+		<value>Habilitar Touch ID</value>
+	</data>
+  <data name="BiometricTouchIDFirtsTimeTitle" xml:space="preserve">
+		<value>Confirme su huella dactilar ahora.</value>
+	</data>
+  <data name="BiometricUseTouchId" xml:space="preserve">
+		<value>Usar el identificador táctil</value>
+	</data>
+  <data name="BiometricUsePin" xml:space="preserve">
+		<value>Usar PIN</value>
+	</data>
+  <data name="BiometricUseFingerprint" xml:space="preserve">
+		<value>Usar huella dactilar</value>
+	</data>
+  <data name="BiometricUseFaceId" xml:space="preserve">
+		<value>Usar el reconocimiento facial</value>
+	</data>
+  <data name="BiometricFaceIDReason" xml:space="preserve">
+		<value>Inténtelo de nuevo</value>
+	</data>
+  <data name="BiometricTouchIDTitle" xml:space="preserve">
+		<value>Escanee su huella dactilar para continuar.</value>
+	</data>
+  <data name="BiometricTouchIDLoginTitle" xml:space="preserve">
+		<value>Inicio de sesión con Touch ID</value>
+	</data>
+  <data name="BiometricTryAgain" xml:space="preserve">
+		<value>Inténtelo de nuevo</value>
+	</data>
+  <data name="BiometricTouchIDHint" xml:space="preserve">
+		<value>Sensor táctil</value>
+	</data>
+  <data name="BiometricBiometricsNotNow" xml:space="preserve">
+		<value>Ahora no</value>
+	</data>
+  <data name="EmailPMAPagePasswordPlaceholder" xml:space="preserve">
+    <value>Contraseña *</value>
+  </data>
+</root>

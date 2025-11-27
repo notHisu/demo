@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        xmlns:ctrl="clr-namespace:Xamarin.Forms.Clinical6.UI.Controls;assembly=MAUI.Clinical6" 
+        x:Class="Xamarin.Forms.Clinical6.UI.Controls.ActionForm" x:Name="_actionForm"
+        xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d">
+    <!--<ScrollView>-->
+        <Grid Style="{DynamicResource ActionFormStyle}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="90" />
+            </Grid.RowDefinitions>
+
+            <!--<OnPlatform x:TypeArguments="View">
+                <OnPlatform.iOS>
+                    <ProgressBar Style="{StaticResource ProgressBarStyle}"  Progress="{Binding Progress, Source={x:Reference _actionForm}}" IsVisible="{Binding ShowProgress, Source={x:Reference _actionForm}}" HorizontalOptions="Fill" />
+                </OnPlatform.iOS>
+                <OnPlatform.Android>
+                    <ProgressBar Style="{StaticResource ProgressBarStyle}" BackgroundColor="Transparent" Progress="{Binding Progress, Source={x:Reference _actionForm}}" IsVisible="{Binding ShowProgress, Source={x:Reference _actionForm}}" HorizontalOptions="Fill" />
+                </OnPlatform.Android>
+            </OnPlatform>-->
+
+        <!--<StackLayout Grid.Row="0">
+            <OnPlatform x:TypeArguments="View">
+                <OnPlatform.iOS>
+                    <ProgressBar
+                        Style="{StaticResource ProgressBarStyle}" 
+                        Progress="{Binding Progress, Source={x:Reference _actionForm}}"
+                        IsVisible="{Binding ShowProgress, Source={x:Reference _actionForm}}"
+                        HorizontalOptions="Fill" />
+                </OnPlatform.iOS>
+                <OnPlatform.Android>
+                    <ProgressBar
+                        Style="{StaticResource ProgressBarStyle}"
+                        BackgroundColor="Transparent"
+                        Progress="{Binding Progress, Source={x:Reference _actionForm}}"
+                        IsVisible="{Binding ShowProgress, Source={x:Reference _actionForm}}"
+                        HorizontalOptions="Fill" />
+                </OnPlatform.Android>
+            </OnPlatform>
+        </StackLayout>-->
+
+        <StackLayout 
+            IsVisible="{Binding ShowProgress, Source={x:Reference _actionForm}}"
+            Grid.Row="0">
+            <ProgressBar
+                Style="{StaticResource ProgressBarStyle}"
+                Progress="{Binding Progress, Source={x:Reference _actionForm}}"
+                IsVisible="{Binding ShowProgress, Source={x:Reference _actionForm}}"
+                HorizontalOptions="Fill">
+                <ProgressBar.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="Transparent" />
+                        <On Platform="iOS" Value="{x:Null}" />
+                    </OnPlatform>
+                </ProgressBar.BackgroundColor>
+            </ProgressBar>
+        </StackLayout>
+
+        <Label Text="{Binding Title, Source={x:Reference _actionForm}}" IsVisible="{Binding Title, Source={x:Reference _actionForm}, Converter={StaticResource HasDataConverter}}" Style="{StaticResource flowStepTitle}" Grid.Row="1" />
+            <Label Text="{Binding Subtitle, Source={x:Reference _actionForm}}" IsVisible="{Binding Subtitle, Source={x:Reference _actionForm}, Converter={StaticResource HasDataConverter}}" Style="{StaticResource flowStepSubtitle}" Grid.Row="2" />
+
+            <!--
+            Please do not change this, HtmlLabel is for iOS
+            and LocalHtmlWebViewer for Android
+            -->
+            <!--
+            Margin here per platform affects spacing on
+            left and right of Description text on intro screen;
+            should align with footer text as well -->
+            <!--<OnPlatform x:TypeArguments="View">
+                <OnPlatform.iOS>
+                    <ctrl:HtmlLabel  Text="{Binding Description, Source={x:Reference _actionForm}}"
+                             Style="{StaticResource flowTitleStepDescription}"
+                             LineBreakMode="WordWrap" HorizontalTextAlignment="Start"
+                             IsVisible="{Binding ShowDescription, Source={x:Reference _actionForm}}"
+                             Grid.Row="3" Margin="20,10,20,0" />
+                </OnPlatform.iOS>
+                <OnPlatform.Android>
+                    <StackLayout Grid.Row="3" Margin="12,10,12,0" Spacing="0"
+                                 IsVisible="{Binding ShowDescription, Source={x:Reference _actionForm}}">
+                        <ctrl:LocalHtmlWebViewer 
+                                    IsVisible="{Binding ShowDescription, Source={x:Reference _actionForm}}"
+                                    Html="{Binding HtmlDescription, Source={x:Reference _actionForm}}" />
+                    </StackLayout>
+                </OnPlatform.Android>
+            </OnPlatform>-->
+
+            <ctrl:HtmlLabel
+                Text="{Binding Description, Source={x:Reference _actionForm}}"
+                Style="{StaticResource flowTitleStepDescription}"
+                LineBreakMode="WordWrap"
+                HorizontalTextAlignment="Start"
+                IsVisible="{Binding ShowDescription, Source={x:Reference _actionForm}}"
+                Margin="20,10,20,0">
+                <ctrl:HtmlLabel.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean">
+                        <On Platform="iOS" Value="true" />
+                        <On Platform="Android" Value="false" />
+                        <On Platform="WinUI" Value="false" />
+                    </OnPlatform>
+                </ctrl:HtmlLabel.IsVisible>
+            </ctrl:HtmlLabel>
+
+            <!-- Android: StackLayout with LocalHtmlWebViewer -->
+            <StackLayout
+                Margin="12,10,12,0"
+                Spacing="0"
+                IsVisible="{Binding ShowDescription, Source={x:Reference _actionForm}}">
+                <StackLayout.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean">
+                        <On Platform="Android" Value="true" />
+                        <On Platform="iOS" Value="false" />
+                        <On Platform="WinUI" Value="false" />
+                    </OnPlatform>
+                </StackLayout.IsVisible>
+
+                <ctrl:LocalHtmlWebViewer
+                    Html="{Binding HtmlDescription, Source={x:Reference _actionForm}}"
+                    IsVisible="{Binding ShowDescription, Source={x:Reference _actionForm}}" />
+            </StackLayout>
+
+            <ContentView x:Name="formContent" Grid.Row="4" HorizontalOptions="Fill" VerticalOptions="Fill">
+                <!-- for margin on left and right of labels and controls on Q&A screens -->
+                <ContentView.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="20,0" />
+                        <On Platform="Android, WinPhone, Windows" Value="10,0" />
+                    </OnPlatform>
+                </ContentView.Margin>
+            </ContentView>
+
+            <Grid x:Name="buttonContinue" IsVisible="{Binding IsFinal}" Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="Fill" Style="{StaticResource buttonSet}" />
+            <Grid x:Name="buttons" IsVisible="{Binding CanGoForward}" Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="Fill" Style="{StaticResource buttonSet}" />
+
+            <Grid HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Row="4" Grid.Column="0" IsVisible="{Binding FormBusy.IsBusy, Source={x:Reference _actionForm}}">
+                <ctrl:Ellipse HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" HeightRequest="50" FillColor="{StaticResource BusyBackground}" />
+                <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsRunning="true" HeightRequest="40" WidthRequest="40" />
+            </Grid>
+        </Grid>
+    <!--</ScrollView>-->
+</ContentView>

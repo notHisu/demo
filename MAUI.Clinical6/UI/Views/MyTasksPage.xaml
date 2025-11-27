@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:Xamarin.Forms.Clinical6.UI.Views"
+    xmlns:ctrl="clr-namespace:Xamarin.Forms.Clinical6.UI.Controls" 
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
+    xmlns:fftran="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Maui"
+    xmlns:utils="clr-namespace:Xamarin.Forms.Clinical6.UI.MarkupExtensions"
+    xmlns:vm="clr-namespace:Xamarin.Forms.Clinical6.Core.ViewModels;assembly=MAUI.Clinical6"
+    Title="{utils:Localized MyTasksPageTitleText}"
+    x:TypeArguments="vm:MyTasksViewModel"
+    x:Class="Xamarin.Forms.Clinical6.Views.MyTasksPage"
+    Padding="0"
+    BackgroundColor="{StaticResource CardPageBackground}"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:converters="clr-namespace:MAUI.Clinical6.UI.Converters"
+    AutomationProperties.IsInAccessibleTree="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:HasDataConverter x:Key="HasDataConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>    
+    <views:BaseContentPage.Content>
+            <Grid Padding="0" AutomationProperties.IsInAccessibleTree="False">
+                <Grid Padding="0,0,0,0" x:Name="HeaderGrid" AutomationProperties.IsInAccessibleTree="False">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="270" />
+                    </Grid.RowDefinitions>
+                    <Image x:Name="HeaderImage"
+                        AutomationProperties.IsInAccessibleTree="False" Source="pma_header_background" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill"/>
+                    <StackLayout x:Name="HeaderTextStackLayout"
+                        VerticalOptions="StartAndExpand" Padding="0" AutomationProperties.IsInAccessibleTree="False">
+                        <Label Text="{Binding GreetingsText}" Margin="0, 65, 0, 0"
+                               d:Text="WELCOME ALEX"
+                               AutomationProperties.IsInAccessibleTree="true"
+                               FontFamily="Roboto-Light" FontSize="16" TextColor="White"
+                               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
+                               /> <!--TabIndex="1"-->
+                    <Label Text="{Binding HeaderTitleText}" Margin="0,8,0,16"
+                               IsVisible="{Binding HeaderTitleText, Converter={StaticResource HasDataConverter}}"
+                               d:Text="Week x of y" AutomationProperties.IsInAccessibleTree="true"
+                               FontFamily="Roboto-Light" FontSize="28" TextColor="White"
+                               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
+                                /> <!--TabIndex="2"-->
+                        <Label Text="{Binding WeekTitle}" Margin="0,8,0,16"
+                               d:Text="Week x of y" IsVisible="{Binding DisplayPatientStudyProgress}"
+                               AutomationProperties.IsInAccessibleTree="true"
+                               FontFamily="Roboto-Light" FontSize="28" TextColor="White"
+                               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
+                                /> <!--TabIndex="3"-->
+                        <StackLayout x:Name="x_stkRemainingActivities" Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                                     Padding="30,0" IsVisible="{Binding RemainingActivitiesIsVisible}"> <!--TabIndex="4"-->
+                        <BoxView Margin="0,10" HeightRequest=".75" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="White" />
+                            <Label Text="{Binding RemainingActivitiesText}"
+                                   d:Text="You have x activities" Margin="0"
+                                   AutomationProperties.IsInAccessibleTree="true"
+                                   FontFamily="Roboto-Light" FontSize="16" TextColor="White"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="Start" HorizontalTextAlignment="Center"/>
+                            <BoxView Margin="0,10" HeightRequest=".75" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+
+                <StackLayout x:Name="MyTasksContainer" AutomationProperties.IsInAccessibleTree="False">
+                    <ListView
+                        x:Name="MyTasksListView"
+                        BackgroundColor="Transparent"
+                        ItemsSource="{Binding TaskCards, Mode=TwoWay}"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        RowHeight="-1"
+                        HasUnevenRows="true"
+                        CachingStrategy="RecycleElement"
+                        IsVisible="{Binding TaskCardsIsVisible}"
+                        IsPullToRefreshEnabled="True"
+                        SelectionMode="None"
+                        SeparatorVisibility="None"
+                        RefreshCommand="{Binding RefreshCommand}"
+                        IsRefreshing="{Binding IsRefreshing}"
+                        AutomationProperties.IsInAccessibleTree="False">
+                        <ListView.Header>
+                            <StackLayout
+                                Padding="{Binding ReconsentBannerPadding}"
+                                IsVisible="{Binding IsBannerRequired}"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                AutomationProperties.HelpText="{Binding HeaderTitleAccessibleText}">
+                                <ctrl:MaterialFrame CornerRadius="0" IsVisible="{Binding IsBannerRequired}"
+                                                    BackgroundColor="White" HasShadow="true" Elevation="10">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                    
+                                        <Image Grid.RowSpan="2" Grid.Column="0"
+                                            Margin="15"
+                                            Source="pic_consent_required"
+                                            WidthRequest="60" HeightRequest="60" HorizontalOptions="Center" />
+                                        <!-- Do not change this MaxLines !-->
+                                        <Label Grid.Row="0" Grid.Column="1"
+                                            Text="{Binding ReconsentTitle}"
+                                            d:Text="We need your re-consent"
+                                            HorizontalOptions="Start" HorizontalTextAlignment="Start"
+                                            LineBreakMode="NoWrap" VerticalOptions="FillAndExpand"
+                                            Margin="0,0,3,0" MaxLines="0"  
+                                            TextColor="#000000" Opacity="0.87"
+                                            FontFamily="Roboto-Regular"
+                                            FontSize="20"/>
+                                        <Label Grid.Row="1" Grid.Column="1"
+                                            Text="{Binding ReconsentBody}"
+                                            d:Text="Please contact your site to get instructions on how to re-consent"
+                                            HorizontalOptions="Start" HorizontalTextAlignment="Start"
+                                            TextColor="#000000" Opacity="0.54"
+                                            FontFamily="Roboto-Regular"
+                                            FontSize="18"/>
+                                    </Grid>
+                                </ctrl:MaterialFrame>
+                            </StackLayout>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ctrl:NoSelectViewCell>
+                                    <ctrl:MaterialCardView
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        BackgroundColor="{StaticResource CardBackground}"
+                                        Label="{Binding Label}"
+                                        ImageSource="{Binding  ImageSource}"
+                                        Title="{Binding Title}"
+                                        Body="{Binding Body}"
+                                        AdditionalInfo="{Binding AdditionalInfo}"
+                                        ButtonIsVisible="{Binding ButtonIsVisible}"
+                                        ButtonText="{Binding ButtonText}"
+                                        ButtonCommand = "{Binding BindingContext.GoToSubTask, Source={x:Reference MyTasksListView}}"
+                                        ButtonCommandParameter="{Binding .}"
+                                        AutomationProperties.IsInAccessibleTree="False"
+                                        />
+                                </ctrl:NoSelectViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+                <ActivityIndicator Color="Black" IsVisible="{Binding IsInitialLoading}" IsRunning="{Binding IsInitialLoading}" IsEnabled="{Binding IsInitialLoading}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="25" WidthRequest="25"/> 
+                <ActivityIndicator Color="Black" IsVisible="{Binding IsTaskButtonProcessing}" IsRunning="{Binding IsTaskButtonProcessing}" IsEnabled="{Binding IsTaskButtonProcessing}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="25" WidthRequest="25"/> 
+            </Grid>
+    </views:BaseContentPage.Content>
+</views:BaseContentPage>

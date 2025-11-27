@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Xamarin.Forms.Clinical6.UI.Controls.MaterialCardView"
+    xmlns:ctrl="clr-namespace:Xamarin.Forms.Clinical6.UI.Controls" 
+    x:Name="materialCardView"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
+    HorizontalOptions="CenterAndExpand"
+    mc:Ignorable="d">
+    <ContentView.Content>
+        <StackLayout Padding="24,12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+            <ctrl:MaterialFrame
+                HorizontalOptions="FillAndExpand"
+                HasShadow="true" CornerRadius="5"
+                Elevation="10"
+                x:Name="CardFrame"
+                BackgroundColor="{Binding Source={x:Reference materialCardView}, Path=BackgroundColor}">
+                <StackLayout>
+                    <Label x:Name="CardLabel"
+                        Text="{Binding Source={x:Reference materialCardView}, Path=Label}"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        d:Text="Card Label"
+                        MaxLines="2"
+                        HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                        LineBreakMode="NoWrap"
+                        TextColor="#000000" Opacity="0.54"
+                        FontFamily="Roboto-Regular"
+                        FontSize="18"/>
+                    <ffimageloading:CachedImage x:Name="CardImage"
+                        Margin="15"
+                        Source="{Binding Source={x:Reference materialCardView}, Path=ImageSource}"
+                        WidthRequest="120" HeightRequest="120" HorizontalOptions="Center" />
+                    <Label x:Name="CardTitle"
+                        Text="{Binding Source={x:Reference materialCardView}, Path=Title}"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        d:Text="Card Title Card Title Card Title Card Title Card Title"
+                        FontFamily="Roboto-Regular"
+                        TextColor="#000000" Opacity="0.87"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="CenterAndExpand" FontSize="18" />
+                    <Label x:Name="CardBody"
+                        Text="{Binding Source={x:Reference materialCardView}, Path=Body}"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        d:Text="Body Text Body Text Body Text Body Text Body Text Body Text Body Text"
+                        FontFamily="Roboto-Regular"
+                        TextColor="#000000" Opacity="0.54"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="CenterAndExpand" FontSize="16" />
+                    <Label x:Name="CardAdditionalInfo"
+                        Text="{Binding Source={x:Reference materialCardView}, Path=AdditionalInfo}"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        d:Text="This is &#x0a; Additional Information &#x0a; About Additional Information"
+                        FontFamily="Roboto-Bold"
+                        TextColor="#000000" Opacity="0.54"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand"
+                        LineHeight="1.3"
+                        FontSize="16" />
+                    <Button x:Name="CardButton" d:Text="Button"
+                        Text="{Binding Source={x:Reference materialCardView}, Path=ButtonText}"
+                        FontFamily="Roboto-Thin"
+                        IsEnabled="true"
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource buttonMedium}" Margin="0,2,0,0"
+                        BackgroundColor = "{StaticResource ButtonLightBackground}" TextColor="{StaticResource White}"
+                        IsVisible="{Binding Source={x:Reference materialCardView}, Path=ButtonIsVisible}"
+                        BindingContext="{Binding Source={x:Reference materialCardView}, Path=ButtonBindingContext}"
+                        Command="{Binding Source={x:Reference materialCardView}, Path=ButtonCommand}"
+                        CommandParameter="{Binding Source={x:Reference materialCardView}, Path=ButtonCommandParameter}"
+                        />
+                </StackLayout>
+            </ctrl:MaterialFrame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

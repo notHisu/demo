@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:paddingLeft="25dp"
+android:paddingBottom="20dp"
+android:id="@+id/text_badge_container"
+android:background="@android:color/transparent">
+
+<TextView
+android:id="@+id/text_badge"
+android:layout_width="20dp"
+android:layout_height="20dp"
+android:textSize="13sp"
+android:textColor="@android:color/white"
+android:textStyle="bold"
+android:gravity="center"
+android:background="@drawable/zzz_badge_background"
+android:textAppearance="@style/Widget.AppCompat.Light.ActionBar.TabText"
+/>
+</RelativeLayout>

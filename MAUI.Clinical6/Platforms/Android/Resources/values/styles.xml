@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainTheme" parent="MainTheme.Base">
+    </style>
+    <!-- Base theme applied no matter what API -->
+    <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
+        <item name="windowNoTitle">true</item>
+        <!--We will be using the toolbar so no need to show ActionBar-->
+        <item name="windowActionBar">false</item>
+        <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">#007ac9</item>
+        <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+        <item name="colorAccent">#000000</item>
+        <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal. -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+        <item name="android:timePickerStyle">@style/SpinnerTimePicker</item>
+        <item name="android:textAppearanceButton">@style/MyTextAppearance.Material.Button</item>
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowStyle</item>
+        <item name="android:colorActivatedHighlight"> #000000 </item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">#FF4081</item>
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowStyle</item>
+    </style>
+    <style name="SpinnerTimePicker" parent="android:Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+    <style name="MyTextAppearance.Material.Button" parent="@android:style/TextAppearance.Material.Button">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="AppTheme.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">#1976D2</item>
+    </style>
+    <style name="CustomToolbarOverflow" parent="MainTheme.Base">
+        <!-- android:textColorPrimary is the  color of the title text
+           in the Toolbar, in the Theme.AppCompat theme:  -->
+        <item name="android:textColorPrimary">#7D8593</item>
+        <item name="colorPrimary">#FFF</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+        <item name="colorAccent">#000</item>
+    </style>
+</resources>

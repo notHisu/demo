@@ -1,0 +1,213 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!--<TargetFrameworks>net8.0-android;net8.0-ios11.0</TargetFrameworks>-->
+		<!--<TargetFrameworks>net8.0-android</TargetFrameworks>-->
+		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+		<!--<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>-->
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>-->
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>-->
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <AndroidResource Remove="Platforms\Android\Resources\drawable\pma_background.png" />
+	  <AndroidResource Remove="Platforms\Android\Resources\drawable\pma_header_background.png" />
+	  <AndroidResource Remove="Platforms\Android\Resources\drawable\pma_logo.png" />
+	  <AndroidResource Remove="Platforms\Android\Resources\drawable\pma_logo_white.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\drawable\bio_face_id.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\bio_face_id_entry.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\bio_fingerprint_entry_android.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\bio_fingerprint_entry_ios.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\bio_fingerprint_input_android.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\bio_fingerprint_ios.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\bio_fingerprint_scanning.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\button_camera.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\button_camera_off.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\button_mic.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\button_mic_off.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_box_checked.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_box_unchecked.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_calendar.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_consult_off.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_consult_on.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_data_completed.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_data_missed.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_expand_down.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_expand_up.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_expand_updown.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_fill_success.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_history.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_mail_read.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_mail_unread.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_radio_off.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_radio_on.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_tab_alerts.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_tab_home.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_tab_more.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_three_dots.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_tool_archive.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_tool_archive_2.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\gui_video_consult.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ico_disabled.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ico_email.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ico_expired.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ico_locked.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ico_policy.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ico_profile.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\ico_session.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\nav_arrow_back.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\nav_arrow_down.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\nav_arrow_right.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\nav_arrow_up.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_amazon_redeem.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_big_empty_alerts.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_big_empty_video.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_big_error.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_big_fitbit.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_big_no_internet.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_big_video_consult.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_caught_up.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_caught_up_2.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_consent_complete.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_consent_required.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_diary.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_reconsent.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_survey.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\pic_take_medication.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\vid_camera.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\vid_camera_off.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\vid_cam_inactive.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\vid_end_call.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\vid_mic.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\vid_mic_off.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\vid_waiting.png" />
+	  <None Remove="Platforms\Android\Resources\layout\dialog_scanning_for_fingerprint.axml" />
+	  <None Remove="Platforms\Android\Resources\layout\RoomLayout.axml" />
+	  <None Remove="Platforms\Android\Resources\values\Colors.xml" />
+	  <None Remove="Platforms\Android\Resources\values\Strings.xml" />
+	  <None Remove="Platforms\Android\Resources\values\styles.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Platforms\Android\Resources\drawable\pma_background.png" />
+	  <MauiImage Include="Platforms\Android\Resources\drawable\pma_header_background.png" />
+	  <MauiImage Include="Platforms\Android\Resources\drawable\pma_logo.png" />
+	  <MauiImage Include="Platforms\Android\Resources\drawable\pma_logo_white.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="akavache" Version="10.2.41" />
+		<PackageReference Include="Autofac" Version="8.0.0" />
+		<PackageReference Include="FFImageLoading.Maui" Version="1.3.1" />
+		<PackageReference Include="Humanizer" Version="2.14.1" />
+		<PackageReference Include="JsonApiSerializer" Version="2.0.1" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="9.0.3" />
+		<PackageReference Include="NLog" Version="6.0.2" />
+		<PackageReference Include="SkiaSharp" Version="3.116.1" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="3.116.1" />
+		<PackageReference Include="ZXing.Net.Maui" Version="0.4.0" />
+		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+		<PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.21" />
+		<PackageReference Include="Xamarin.OpenTok.Android">
+		  <Version>2.18.1</Version>
+		</PackageReference>
+	</ItemGroup>
+
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\Clinical6SDK\Clinical6SDK.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="AppShared.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\AppNavigationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Controls\ActionForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Controls\CustomNavigationBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Controls\MaterialCardView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Controls\SSOOptionsContainer.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Controls\SSOOptionsController.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Controls\VersionPrivacyLabel.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\AlertsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\DashboardMasterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\DashboardTabPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\EmailPMAPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\MenuPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\MyTasksPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\SubMenuPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Views\ViewCells\AppMenuViewCell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+	  <PackageReference Include="Xamarin.AndroidX.Activity.Ktx">
+	    <Version>1.10.1.2</Version>
+	  </PackageReference>
+	  <PackageReference Include="Xamarin.AndroidX.Biometric">
+	    <Version>1.1.0.29</Version>
+	  </PackageReference>
+	  <PackageReference Include="Xamarin.AndroidX.Collection.Ktx">
+	    <Version>1.5.0.2</Version>
+	  </PackageReference>
+	  <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData">
+	    <Version>2.8.7.4</Version>
+	  </PackageReference>
+	  <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx">
+	    <Version>2.8.7.4</Version>
+	  </PackageReference>
+	  <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Ktx">
+	    <Version>2.8.7.4</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+</Project>

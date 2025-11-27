@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:Xamarin.Forms.Clinical6.UI.Views" 
+    xmlns:ctrl="clr-namespace:Xamarin.Forms.Clinical6.UI.Controls" 
+    xmlns:effects="clr-namespace:Xamarin.Forms.Clinical6.UI.Effects" 
+    xmlns:ex="clr-namespace:Xamarin.Forms.Clinical6.UI.MarkupExtensions" 
+    xmlns:vm="clr-namespace:Xamarin.Forms.Clinical6.ViewModels;assembly=MAUI.Clinical6" 
+    x:Class="Xamarin.Forms.Clinical6.Login.EmailPMAPage"
+    xmlns:viewscustom="clr-namespace:Xamarin.Forms.Clinical6.Controls" 
+    x:TypeArguments="vm:LoginPMAViewModel"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:behaviors="clr-namespace:MAUI.Clinical6.UI.Behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <views:BaseContentPage.Content>
+        <Grid>
+            <Image Source="pma_background" Aspect="AspectFill" AutomationProperties.IsInAccessibleTree="False" />
+            <ctrl:ActionForm FormBusy="{Binding LoginAction}" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent">
+                <ctrl:ActionForm.FormContent>
+                    <Grid Margin="15" VerticalOptions="Center">
+                        <Frame BackgroundColor="{StaticResource LoginBackgroundSolid}" BorderColor="Silver">
+                            <StackLayout Style="{StaticResource flowForm}">
+                                <Image Source="{Binding StudyLogo}" Style="{StaticResource flowIconForm}" AutomationProperties.HelpText="{ex:Localized StudyLogoHelpText}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding OnEndpointChangeCommand}" NumberOfTapsRequired="7"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
+                                    <ctrl:SSOOptionsContainer ItemsSource="{Binding OptionsSSO}" />
+                                </StackLayout>
+
+                                <Label Text="{ex:Localized EmailPMAPageLabelSignInHeader}" Style="{StaticResource loginTextPrimary}" />
+                                <ctrl:MaterialTextbox x:Name="email" 
+                                                      Text="{Binding EmailAddress}" 
+                                                      PlaceHolderText="{ex:Localized EmailPMAPageEmailPlaceholder}" 
+                                                      HorizontalOptions="FillAndExpand"
+                                                      KeyboardType = "Email"
+                                                      ReturnKeyType="Done"
+                                                      IOSTextBoxHeight="50"
+                                                      DroidTextBoxHeight="50"
+                                                      Margin="5,0,5,0"
+                                                      MatBorderColor="{Binding EmailErrorMatBorderColor}"
+                                                      AutomationProperties.HelpText="{ex:Localized EmailPMAPageEmailHelpText}"/>
+
+                                <Label Text="{Binding EmailErrorMessage}" VerticalOptions="Start" 
+                                       HorizontalOptions="StartAndExpand" Margin="2,-24,0,0" Style="{StaticResource loginTextThird}"  
+                                       HorizontalTextAlignment="Start"
+                                       TextColor="{StaticResource ErrorTextColor}" IsVisible="false">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference email}, Path=LostFocusAndInvalidEmail}" Value="true">
+                                            <Setter Property="IsVisible" Value="true" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Label" Binding="{Binding EmailError}" Value="false">
+                                            <Setter Property="IsVisible" Value="false" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+
+                                <ctrl:MaterialTextbox x:Name="password" Text="{Binding Password}"
+                                                      Style="{StaticResource loginEntry}" 
+                                                      KeyboardType = "Default"
+                                                      ReturnKeyType="Done"
+                                                      IsPassword="true"
+                                                      HorizontalOptions="FillAndExpand"
+                                                      IOSTextBoxHeight="50"
+                                                      DroidTextBoxHeight="50"
+                                                      Margin="5,0,5,0"
+                                                      MatBorderColor="{Binding PasWordErrorMatBorderColor}"
+                                                      PlaceHolderText="{ex:Localized EmailPMAPagePasswordPlaceholder}" 
+                                                      AutomationProperties.HelpText="{ex:Localized EmailPMAPagePasswordHelpText}">
+                                    <ctrl:MaterialTextbox.Triggers>
+                                        <DataTrigger TargetType="ctrl:MaterialTextbox" Binding="{Binding IsBiometricsIconAvailable}" Value="true">
+                                            <Setter Property="IsVisible" Value="false" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="ctrl:MaterialTextbox" Binding="{Binding IsBiometricsIconAvailable}" Value="false">
+                                            <Setter Property="IsVisible" Value="true" />
+                                        </DataTrigger>
+                                    </ctrl:MaterialTextbox.Triggers>
+                                </ctrl:MaterialTextbox>
+
+                                <Grid>
+                                    <ctrl:MaterialTextbox x:Name="passwordBiometrics" Text="{Binding Password}"
+                                                          Style="{StaticResource loginEntry}" 
+                                                          KeyboardType = "Default"
+                                                          ReturnKeyType="Done"
+                                                          IsPassword="true"
+                                                          HorizontalOptions="FillAndExpand"
+                                                          IOSTextBoxHeight="50"
+                                                          DroidTextBoxHeight="50"
+                                                          Margin="5,0,5,0"
+                                                          IsVisible="{Binding IsBiometricsIconAvailable}"
+                                                          MatBorderColor="{Binding PasWordErrorMatBorderColor}"
+                                                          PlaceHolderText="{ex:Localized EmailPMAPagePasswordPlaceholder}" 
+                                                          AutomationProperties.HelpText="{ex:Localized EmailPMAPagePasswordHelpText}" />
+                                    <Image Margin="10,5" Source="{Binding ImageBiometrics}" IsVisible="{Binding IsBiometricsIconAvailable}"
+                                           HorizontalOptions="End" VerticalOptions="Center" 
+                                           HeightRequest="30" WidthRequest="30"
+                                           AutomationProperties.IsInAccessibleTree="{Binding IsBiometricsIconAvailable}"
+                                           AutomationProperties.Name="{ex:Localized BiometricTitle}">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BiometricsAction.Command}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Grid>
+
+                                <Label Text="{ex:Localized EmailPMAPagePasswordTextBoxErrorMsg}" VerticalOptions="Start" 
+                                       HorizontalOptions="StartAndExpand" Margin="2,-24,0,0" Style="{StaticResource loginTextThird}"  
+                                       HorizontalTextAlignment="Start"
+                                       TextColor="{StaticResource ErrorTextColor}" IsVisible="false">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference password}, Path=LostFocusAndInvalidPassword}" Value="true">
+                                            <Setter Property="IsVisible" Value="true" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference passwordBiometrics}, Path=LostFocusAndInvalidPassword}" Value="true">
+                                            <Setter Property="IsVisible" Value="true" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Label" Binding="{Binding PassError}" Value="false">
+                                            <Setter Property="IsVisible" Value="false" />
+                                        </DataTrigger>
+
+                                    </Label.Triggers>
+
+                                </Label>
+
+                                <viewscustom:CustomStateButton Text="{ex:Localized EmailPMAPageSignInBtnText}" Command="{Binding LoginAction.Command}"
+                                                               Margin="5,0,5,0" AutomationProperties.HelpText="{Binding CanLoginErrorText}">
+                                    <viewscustom:CustomStateButton.Triggers>
+                                        <DataTrigger TargetType="viewscustom:CustomStateButton" Binding="{Binding IsTryLogin}" Value="true">
+                                            <Setter Property="BackgroundColor" Value="{StaticResource DisabledColor}" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="viewscustom:CustomStateButton" Binding="{Binding CanLogin}" Value="false">
+                                            <Setter Property="Style" Value="{StaticResource mainButtonDisabledStyle}" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="viewscustom:CustomStateButton" Binding="{Binding CanLogin}" Value="true">
+                                            <Setter Property="Style" Value="{StaticResource mainButtonEnabledStyle}" />
+                                        </DataTrigger>
+                                    </viewscustom:CustomStateButton.Triggers>
+                                </viewscustom:CustomStateButton>
+
+                                <Label Text="{ex:Localized EmailPMAPageForgotPasswordText}" 
+                                       AutomationProperties.HelpText="{ex:Localized EmailPMAPageForgotPasswordTextHelpText}"
+                                       HorizontalOptions="Center" Style="{StaticResource loginForgot}">
+                                    <Label.Behaviors>
+                                        <behaviors:LabelCenterTextBehavior />
+                                        <behaviors:LabelUnderlineBehavior />
+                                    </Label.Behaviors>
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ForgotPinAction.Command}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                                <ctrl:VersionPrivacyLabel VersionText="{Binding AppVersion}"
+                                                          PrivacyText="{ex:Localized EmailPMAPagePrivacyLinkText}"
+                                                          Command="{Binding OnPolicyCommand}"/>
+
+                                 <Picker IsVisible="false" ItemsSource="{Binding Endpoints}"
+                                         x:Name="pickerEndpoints" 
+                                         SelectedItem="{Binding SelectedEndpoint, Mode=TwoWay}"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </ctrl:ActionForm.FormContent>
+                <ctrl:ActionForm.Buttons>
+                </ctrl:ActionForm.Buttons>
+            </ctrl:ActionForm>
+        </Grid>
+    </views:BaseContentPage.Content>
+</views:BaseContentPage>

@@ -1,0 +1,1079 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutTheStudyPageTitleText" xml:space="preserve">
+    <value>About The Study</value>
+  </data>
+  <data name="AboutTheStudyViewModelButtonOkText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="AboutTheStudyViewModelErrorHeader" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="AboutTheStudyViewModelErrorMessage" xml:space="preserve">
+    <value>No study info available</value>
+  </data>
+  <data name="AccountLocked" xml:space="preserve">
+    <value>Konto zablokowane</value>
+  </data>
+  <data name="AccountLockedFailedAttempts" xml:space="preserve">
+    <value>Konto zostało zablokowane z powodu zbyt wielu nieudanych prób zalogowania się. Aby odblokować konto, można wykonać jedną z poniższych czynności:</value>
+  </data>
+  <data name="ActionContinue" xml:space="preserve">
+    <value>Kontynuuj</value>
+  </data>
+  <data name="ActionRetry" xml:space="preserve">
+    <value>RETRY</value>
+  </data>
+  <data name="AdobeSignDescription1" xml:space="preserve">
+    <value>You will need to provide your digital signature via Adobe Sign.</value>
+  </data>
+  <data name="AdobeSignDescription2" xml:space="preserve">
+    <value>During this process we will ask you to provide a verification code 2 times:</value>
+  </data>
+  <data name="AdobeSignDescription3" xml:space="preserve">
+    <value>once in order to view the form and once when you click to sign.</value>
+  </data>
+  <data name="AdobeSignDescription4" xml:space="preserve">
+    <value>Before you sign, please be sure you fully understand what you are consenting to. If you have any questions, please contact your study doctor.</value>
+  </data>
+  <data name="AdobeSignText" xml:space="preserve">
+    <value>Adobe Sign</value>
+  </data>
+  <data name="Agree" xml:space="preserve">
+    <value>Agree</value>
+  </data>
+  <data name="AgreementValidationErrorMessage" xml:space="preserve">
+    <value>Nasze zasady uległy zmianie. Proszę zapoznać się z nowymi zasadami i je zaakceptować, aby móc kontynuować.</value>
+  </data>
+  <data name="AgreementValidationErrorTitle" xml:space="preserve">
+    <value>Unable to Continue</value>
+  </data>
+  <data name="AlertsListHelpText" xml:space="preserve">
+    <value>This is the alerts list</value>
+  </data>
+  <data name="AlertsText" xml:space="preserve">
+    <value>Ostrzeżenia</value>
+  </data>
+  <data name="AppInitViewModelGenerateTokenError" xml:space="preserve">
+    <value>could not generate new authtoken</value>
+  </data>
+  <data name="AppInitViewModelMagicLinkTokenError" xml:space="preserve">
+    <value>could not generate new authtoken for use with magic link</value>
+  </data>
+  <data name="AppointmentsPageNoUpcomingAppointments" xml:space="preserve">
+    <value>Obecnie nie ma żadnych zaplanowanych wizyt</value>
+  </data>
+  <data name="AppointmentsPageNoUpcomingAppointmentsBody" xml:space="preserve">
+    <value>Obecnie nie ma żadnych zaplanowanych wizyt.</value>
+  </data>
+  <data name="AppointmentsPageNoUpcomingAppointmentsExtra" xml:space="preserve">
+    <value>Prosimy o kontakt z ośrodkiem, aby umówić się na następną wizytę.</value>
+  </data>
+  <data name="AppointmentsPageTitleText" xml:space="preserve">
+    <value>Wizyty</value>
+  </data>
+  <data name="AppointmentsPageUpcomingAppointments" xml:space="preserve">
+    <value>NAJBLIŻSZA WIZYTA</value>
+  </data>
+  <data name="ArchivedText" xml:space="preserve">
+    <value>Zarchiwizowano</value>
+  </data>
+  <data name="ArchiveText" xml:space="preserve">
+    <value>Archiwizuj</value>
+  </data>
+  <data name="ArticlesPageTitleText" xml:space="preserve">
+    <value>Articles</value>
+  </data>
+  <data name="ArticlesViewModelButtonOkText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ArticlesViewModelErrorHeader" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ArticlesViewModelErrorMessage" xml:space="preserve">
+    <value>No articles available</value>
+  </data>
+  <data name="BeginEsignatureProcessText" xml:space="preserve">
+    <value>Begin eSignature Process</value>
+  </data>
+  <data name="CompletedHistoryFlowProcessPageBackButtonText" xml:space="preserve">
+    <value>Wstecz</value>
+  </data>
+  <data name="ConsentCompletedDescription" xml:space="preserve">
+    <value>You have completed your part of the consent process.</value>
+  </data>
+  <data name="ConsentNotComplete" xml:space="preserve">
+    <value>Consent is not complete</value>
+  </data>
+  <data name="ConsentRequestedImageHelpText" xml:space="preserve">
+    <value>Consent Requested Icon</value>
+  </data>
+  <data name="ContactDetailsPageContactTypeText" xml:space="preserve">
+    <value>Contact Type</value>
+  </data>
+  <data name="ContactDetailsPageEmailText" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="ContactDetailsPageFaxText" xml:space="preserve">
+    <value>Faks</value>
+  </data>
+  <data name="ContactDetailsPageMoreInfoText" xml:space="preserve">
+    <value>*Prosimy o kontakt telefoniczny lub e-mailowy w celu uzyskania aktualnych godzin, informacji lub w przypadku dalszych pytań.</value>
+  </data>
+  <data name="ContactDetailsPageNameText" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="ContactDetailsPagePhoneText" xml:space="preserve">
+    <value>Numeru telefonu</value>
+  </data>
+  <data name="ContactDetailsPagePrimaryContactText" xml:space="preserve">
+    <value>Główna osoba do kontaktu</value>
+  </data>
+  <data name="ContactDetailsPageTitleText" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="ContactPagePrimaryContactText" xml:space="preserve">
+    <value>Główna osoba do kontaktu</value>
+  </data>
+  <data name="ContactPageTitleText" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="ContactPageViewText" xml:space="preserve">
+    <value>Zobacz</value>
+  </data>
+  <data name="CreatePinConfirmationEntryPlaceholder" xml:space="preserve">
+    <value>Confirm 6 Digit PIN</value>
+  </data>
+  <data name="CreatePinEntryInstructions" xml:space="preserve">
+    <value>Please be sure to remember this information. You will be asked to enter your PIN next time you enter the app.</value>
+  </data>
+  <data name="CreatePinEntryPlaceholder" xml:space="preserve">
+    <value>New 6 Digit PIN</value>
+  </data>
+  <data name="CreatePinEntryTitle" xml:space="preserve">
+    <value>Utwórz nowe hasło</value>
+  </data>
+  <data name="CreatePinErrorDialogTitle" xml:space="preserve">
+    <value>Unable to create PIN</value>
+  </data>
+  <data name="CreatePinMismatchErrorDialogMessage" xml:space="preserve">
+    <value>Hasło nie spełnia powyższych wymagań.</value>
+  </data>
+  <data name="CreatePinMismatchErrorDialogTitle" xml:space="preserve">
+    <value>PINs Mismatch</value>
+  </data>
+  <data name="DashboardMasterPageHomeText" xml:space="preserve">
+    <value>Strona główna</value>
+  </data>
+  <data name="DashboardMasterPageMenuText" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="DashboardViewModelDialogErrorHeader" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>DELETE</value>
+  </data>
+  <data name="DialogCancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="DialogContinue" xml:space="preserve">
+    <value>Kontynuuj</value>
+  </data>
+  <data name="DialogOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DialogQuit" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="DisabledAccountPageAccountContactInfoText" xml:space="preserve">
+    <value>Your account has been disabled. Please contact your study site.</value>
+  </data>
+  <data name="DisabledAccountPageDisabledAccountText" xml:space="preserve">
+    <value>Disabled Account</value>
+  </data>
+  <data name="DisabledImageHelpText" xml:space="preserve">
+    <value>Disabled Icon</value>
+  </data>
+  <data name="eDiariesListHelpText" xml:space="preserve">
+    <value>This is the eDiaries list</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>EDIT</value>
+  </data>
+  <data name="EligibilityDescriptionText" xml:space="preserve">
+    <value>Koordynatorzy badania analizują dokumentację. Wkrótce będą wiedzieć, czy możesz wziąć w nim udział. Jeśli chcesz uzyskać więcej informacji, prosimy o kontakt z ośrodkiem.</value>
+  </data>
+  <data name="EligibilityPendingText" xml:space="preserve">
+    <value>Trwa sprawdzanie kwalifikacji do udziału</value>
+  </data>
+  <data name="EligibilityStatusText" xml:space="preserve">
+    <value>STATUS KWALIFIKACJI</value>
+  </data>
+  <data name="EmailEntryEmailAddressLabel" xml:space="preserve">
+    <value>Enter your previously registered email address.</value>
+  </data>
+  <data name="EmailEntryInvalidEmailMessage" xml:space="preserve">
+    <value>We don't recognize this email address. Please enter your previously registered email address.</value>
+  </data>
+  <data name="EmailEntryInvalidEmailTitle" xml:space="preserve">
+    <value>Nieprawidłowy format adresu e-mail. Proszę wpisać poprawny adres e-mail.</value>
+  </data>
+  <data name="EmailEntryPageNewEmailText" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailEntryText" xml:space="preserve">
+    <value>Email Entry</value>
+  </data>
+  <data name="EmailEntryViewModelAccountDisabledMsg" xml:space="preserve">
+    <value>Your account has been disabled. Please contact your Site coordinator.</value>
+  </data>
+  <data name="EmailImageHelpText" xml:space="preserve">
+    <value>Email Icon</value>
+  </data>
+  <data name="EmailInformedConsentDescription" xml:space="preserve">
+    <value>We will email you the signed informed consent once the study staff has signed as well.</value>
+  </data>
+  <data name="EmailPMAPageEmailHelpText" xml:space="preserve">
+    <value>This is a Text Box for the Email, Double tap to edit</value>
+  </data>
+  <data name="EmailPMAPageEmailPlaceholder" xml:space="preserve">
+    <value>E-mail *</value>
+  </data>
+  <data name="EmailPMAPageForgotPasswordText" xml:space="preserve">
+    <value>Nie pamiętasz hasła?</value>
+  </data>
+  <data name="EmailPMAPageForgotPasswordTextHelpText" xml:space="preserve">
+    <value>Double Tap to active</value>
+  </data>
+  <data name="EmailPMAPageLabelSignInHeader" xml:space="preserve">
+    <value>Logowanie się uczestnika</value>
+  </data>
+  <data name="EmailPMAPagePasswordHelpText" xml:space="preserve">
+    <value>This is a Text Box for the Password, Double tap to edit</value>
+  </data>
+  <data name="EmailPMAPagePasswordPlaceholder" xml:space="preserve">
+    <value>Hasło *</value>
+  </data>
+  <data name="EmailPMAPagePasswordTextBoxErrorMsg" xml:space="preserve">
+    <value>Hasło jest wymagane.</value>
+  </data>
+  <data name="EmailPMAPagePrivacyLinkText" xml:space="preserve">
+    <value>Zasady ochrony prywatności</value>
+  </data>
+  <data name="EmailPMAPageSignInBtnText" xml:space="preserve">
+    <value>Zaloguj</value>
+  </data>
+  <data name="EmailVerificationCodeDialogMessage" xml:space="preserve">
+    <value>8 digit verification code was sent to your email address. Please verify the email to continue in the app.</value>
+  </data>
+  <data name="EmailVerificationCodeDialogTitle" xml:space="preserve">
+    <value>Verification Code</value>
+  </data>
+  <data name="EmailVerificationCodeEntryInstructions" xml:space="preserve">
+    <value>Enter the Verification Code number we sent to your registered email, along with your email address.</value>
+  </data>
+  <data name="EmailVerificationEntryInstructions" xml:space="preserve">
+    <value>8 digit verification code was sent to your email address. Please verify the email to continue in the app.</value>
+  </data>
+  <data name="EmailVerificationEntryTitle" xml:space="preserve">
+    <value>Enter Verification Code</value>
+  </data>
+  <data name="EmailVerificationErrorDialogMessage" xml:space="preserve">
+    <value>The invalid verification code has been entered. Please try again.</value>
+  </data>
+  <data name="EmailVerificationErrorDialogTitle" xml:space="preserve">
+    <value>Ostrzeżenia</value>
+  </data>
+  <data name="ErrorMessageFriendly" xml:space="preserve">
+    <value>Coś się nie udało!</value>
+  </data>
+  <data name="ErrorMessageRetry" xml:space="preserve">
+    <value>Odczekać 15 minut przed ponowną próbą</value>
+  </data>
+  <data name="EsignatureCompleteText" xml:space="preserve">
+    <value>eSignature Complete!</value>
+  </data>
+  <data name="ExpiredImageHelpText" xml:space="preserve">
+    <value>Expired Icon</value>
+  </data>
+  <data name="FinishText" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="FlowCompletedSurveyProcessViewModelNotAvailText" xml:space="preserve">
+    <value>Not Available</value>
+  </data>
+  <data name="FlowDatePickerTitle" xml:space="preserve">
+    <value>'Date...'</value>
+  </data>
+  <data name="FlowFieldDatePickerExtendedEnterTime" xml:space="preserve">
+    <value>Enter Time</value>
+  </data>
+  <data name="FlowFieldDatePickerLabelEnterDate" xml:space="preserve">
+    <value>Enter Date</value>
+  </data>
+  <data name="FlowPickerTitle" xml:space="preserve">
+    <value>Choose one...</value>
+  </data>
+  <data name="FlowProcessInvalidStepsError" xml:space="preserve">
+    <value>There needs to be at least 1 step in the flow process</value>
+  </data>
+  <data name="FlowProcessMissingFirstStepError" xml:space="preserve">
+    <value>Could not find starting step with Id:</value>
+  </data>
+  <data name="FlowProcessPageToolbarItemExitText" xml:space="preserve">
+    <value>Wyjdź</value>
+  </data>
+  <data name="FlowProcessSplashViewModelDateText" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="FlowProcessSplashViewModelTimeText" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="FlowQuitDialogMessage" xml:space="preserve">
+    <value>Would you like to abandon this form?</value>
+  </data>
+  <data name="FlowSaveDraftExit" xml:space="preserve">
+    <value>Wyjdź z zadania</value>
+  </data>
+  <data name="FlowSaveDraftStay" xml:space="preserve">
+    <value>Stay &amp; Complete</value>
+  </data>
+  <data name="FlowSaveDraftTitle" xml:space="preserve">
+    <value>You have not completed this activity. If you exit, your progress will be saved, and later you can continue from where you stopped.</value>
+  </data>
+  <data name="FlowSurveyHistoryPageActivityHistoryText" xml:space="preserve">
+    <value>Historia aktywności</value>
+  </data>
+  <data name="FlowSurveyHistoryPageBackText" xml:space="preserve">
+    <value>Wstecz</value>
+  </data>
+  <data name="FlowValidationDialogMessage" xml:space="preserve">
+    <value>Please check that all required values have been entered correcty before proceeding.</value>
+  </data>
+  <data name="FlowValidationDialogTitle" xml:space="preserve">
+    <value>Unable to Proceed</value>
+  </data>
+  <data name="ForgotPinActivationCode" xml:space="preserve">
+    <value>Enter Verification Code</value>
+  </data>
+  <data name="ForgotPinActivationCodePlaceHolder" xml:space="preserve">
+    <value>Verification Code</value>
+  </data>
+  <data name="ForgotPinEmailErrorBody" xml:space="preserve">
+    <value>We cannot find your email address in the system. Please re-enter your email address.</value>
+  </data>
+  <data name="ForgotPinEmailErrorHeader" xml:space="preserve">
+    <value>Nieprawidłowy format adresu e-mail. Proszę wpisać poprawny adres e-mail.</value>
+  </data>
+  <data name="ForgotPinEmailErrorMessage" xml:space="preserve">
+    <value>Please provide a valid Email</value>
+  </data>
+  <data name="ForgotPinEmailSent" xml:space="preserve">
+    <value>We sent an email with an verification code to {0}</value>
+  </data>
+  <data name="ForgotPinEmailSentLabel" xml:space="preserve">
+    <value>Sprawdź skrzynkę odbiorczą</value>
+  </data>
+  <data name="ForgotPinEmailSentPageCheckEmailText" xml:space="preserve">
+    <value>Sprawdzić wiadomość e-mail, w której znajdują się instrukcje dotyczące odblokowania konta</value>
+  </data>
+  <data name="ForgotPinEmailSentPageEmailResetText" xml:space="preserve">
+    <value>Wkrótce powinien nadejść e-mail służący do zresetowania hasła. Proszę sprawdzić skrzynkę wiadomości niechcianych.</value>
+  </data>
+  <data name="ForgotPinEmailSentPageGoToSignInText" xml:space="preserve">
+    <value>Przejdź do logowania się</value>
+  </data>
+  <data name="ForgotPinEnterEmailLabel" xml:space="preserve">
+    <value>Wpisz adres e-mail, którego używasz do zalogowania się, aby otrzymać od nas łącze do zresetowania hasła.</value>
+  </data>
+  <data name="ForgotPinEnterEmailLine1" xml:space="preserve">
+    <value>We can send an verification code to your email to reset your PIN.</value>
+  </data>
+  <data name="ForgotPinEnterEmailLine2" xml:space="preserve">
+    <value>Please enter your email address and tap the Send button below.</value>
+  </data>
+  <data name="ForgotPinEnterEmailPageButtonSendLinkText" xml:space="preserve">
+    <value>Wyślij łącze</value>
+  </data>
+  <data name="ForgotPinEnterEmailPageForgotPasswordText" xml:space="preserve">
+    <value>Nie pamiętasz hasła</value>
+  </data>
+  <data name="ForgotPinEnterEmailPagePasswordChangeText" xml:space="preserve">
+    <value>Nie muszę zmieniać hasła.</value>
+  </data>
+  <data name="ForgotPinEnterEmailPagePasswordChangeTextHelpText" xml:space="preserve">
+    <value>Double tap to activate</value>
+  </data>
+  <data name="ForgotPinEnterEmailPageSendEmailText" xml:space="preserve">
+    <value>Wpisz adres e-mail, którego używasz do zalogowania się, aby otrzymać od nas łącze do zresetowania hasła.</value>
+  </data>
+  <data name="ForgotPinEnterEmailViewModelEmailReqText" xml:space="preserve">
+    <value>Adres e-mail jest wymagany.</value>
+  </data>
+  <data name="ForgotPinEnterEmailViewModelInvalidEmailText" xml:space="preserve">
+    <value>Nieprawidłowy format adresu e-mail. Proszę wpisać poprawny adres e-mail.</value>
+  </data>
+  <data name="HistoryListHelpText" xml:space="preserve">
+    <value>This is the history list</value>
+  </data>
+  <data name="HomeAllCaughtUp" xml:space="preserve">
+    <value>WSZYSTKIE CZYNNOŚCI ZOSTAŁY WYKONANE</value>
+  </data>
+  <data name="HomeKeepGreatWorkBody" xml:space="preserve">
+    <value>You have completed all activites at this time. You may have new activities coming up soon.</value>
+  </data>
+  <data name="HomePageCheckBackText" xml:space="preserve">
+    <value>Sprawdzaj codziennie o 18:00 i wypełniaj dzienniczek.</value>
+  </data>
+  <data name="HomePageConsentDescription" xml:space="preserve">
+    <value>Gdy lekarz prowadzący badanie przeanalizuje formularz świadomej zgody i wyrazisz zgodę na udział w badaniu, będzie można kontynuować.</value>
+  </data>
+  <data name="HomePageNoPhoneCall" xml:space="preserve">
+    <value>Phone call can be made at the moment</value>
+  </data>
+  <data name="HomeWeek" xml:space="preserve">
+    <value>Tydzień {0} do {1}</value>
+  </data>
+  <data name="HomeWelcome" xml:space="preserve">
+    <value>Witaj {0}</value>
+  </data>
+  <data name="HomeYouHaveActivity" xml:space="preserve">
+    <value>Masz {0} czynność</value>
+  </data>
+  <data name="HomeYouHaveActivities" xml:space="preserve">
+    <value>Masz {0} czynności</value>
+  </data>
+  <data name="InactiveAccountDescription" xml:space="preserve">
+    <value>Konto użytkownika zastało dezaktywowane. Prosimy o kontakt z ośrodkiem prowadzącym badanie.</value>
+  </data>
+  <data name="InactiveAccountText" xml:space="preserve">
+    <value>Nieaktywne konto</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Nieprawidłowe dane uwierzytelniające</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid Credentials</value>
+  </data>
+  <data name="InvalidCredentialsBody" xml:space="preserve">
+    <value>Please refer to your invitation email for further instructions.</value>
+  </data>
+  <data name="InvalidCredentialsTitle" xml:space="preserve">
+    <value>Nieprawidłowe dane uwierzytelniające</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Nieprawidłowy format adresu e-mail. Proszę wpisać poprawny adres e-mail.</value>
+  </data>
+  <data name="JoinConsult" xml:space="preserve">
+    <value>Join a Consult</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="LockedImageHelpText" xml:space="preserve">
+    <value>Locked Icon</value>
+  </data>
+  <data name="LockedPageCheckEmailText" xml:space="preserve">
+    <value>Sprawdzić wiadomość e-mail, w której znajdują się instrukcje dotyczące odblokowania konta</value>
+  </data>
+  <data name="LockedPageFailedAttemptsText" xml:space="preserve">
+    <value>Konto zostało zablokowane z powodu zbyt wielu nieudanych prób zalogowania się. Aby odblokować konto, można wykonać jedną z poniższych czynności:</value>
+  </data>
+  <data name="LockedPageLockAccountText" xml:space="preserve">
+    <value>Konto zablokowane</value>
+  </data>
+  <data name="LockedPageResetPasswordText" xml:space="preserve">
+    <value>Zresetować hasło</value>
+  </data>
+  <data name="LockedPageReturnToSignInText" xml:space="preserve">
+    <value>Powrót do logowania się</value>
+  </data>
+  <data name="LockedPageWaitTimeLimitText" xml:space="preserve">
+    <value>Odczekać 15 minut przed ponowną próbą, lub</value>
+  </data>
+  <data name="LoginFlowLogIn" xml:space="preserve">
+    <value>LOG IN</value>
+  </data>
+  <data name="LoginFlowNext" xml:space="preserve">
+    <value>NEXT</value>
+  </data>
+  <data name="LoginPMAViewModelAlertHeaderText" xml:space="preserve">
+    <value>Nieprawidłowe dane uwierzytelniające</value>
+  </data>
+  <data name="LoginPMAViewModelEmailReqText" xml:space="preserve">
+    <value>Adres e-mail jest wymagany.</value>
+  </data>
+  <data name="LoginPMAViewModelInvalidEmailText" xml:space="preserve">
+    <value>Nieprawidłowy format adresu e-mail. Proszę wpisać poprawny adres e-mail.</value>
+  </data>
+  <data name="LoginPMAViewModelRemainingAtemptText" xml:space="preserve">
+    <value>Attempts remaining:</value>
+  </data>
+  <data name="LoginPMAViewModelRemainingAtemptTextBody" xml:space="preserve">
+    <value>Konto może zostać zablokowane po 3 nieudanych próbach zalogowania się.</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Wyloguj się</value>
+  </data>
+  <data name="MarkUnreadText" xml:space="preserve">
+    <value>Oznacz jako nieprzeczytane</value>
+  </data>
+  <data name="MenuListHelpText" xml:space="preserve">
+    <value>This is the menu list</value>
+  </data>
+  <data name="MenuPageCopyrightText" xml:space="preserve">
+    <value>© 2019 Clinical6 PRA Health Sciences</value>
+  </data>
+  <data name="MenuPageSignOutText" xml:space="preserve">
+    <value>Wyloguj się</value>
+  </data>
+  <data name="MenuPageTitleText" xml:space="preserve">
+    <value>Więcej</value>
+  </data>
+  <data name="MyTasksHeaderGreetingText" xml:space="preserve">
+    <value>Witaj {0}</value>
+  </data>
+  <data name="MyTasksHeaderRemainingActivitiesText" xml:space="preserve">
+    <value>Masz {0:czynności;zajęcia}</value>
+  </data>
+  <data name="MyTasksHeaderTitleTextScreening" xml:space="preserve">
+    <value>Screening</value>
+  </data>
+  <data name="MyTasksHeaderTitleTextWaiting" xml:space="preserve">
+    <value>Waiting for Next Step</value>
+  </data>
+  <data name="MyTasksPageTitleText" xml:space="preserve">
+    <value>Strona główna</value>
+  </data>
+  <data name="MyTasksReconsentBody" xml:space="preserve">
+    <value>Gdy lekarz prowadzący badanie przeanalizuje formularz świadomej zgody i wyrazisz zgodę na udział w badaniu, będzie można kontynuować.</value>
+  </data>
+  <data name="MyTasksReconsentTitle" xml:space="preserve">
+    <value>Potrzebujemy Twojej zgody</value>
+  </data>
+  <data name="MyTasksStatusCardAddressFormat" xml:space="preserve">
+    <value>{0}
+        {1}
+        {2}, {3} {4}
+        {5}
+        {6}
+        {7}</value>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteAssignedBody" xml:space="preserve">
+    <value>In the mean time, you can view your entire study schedule by tapping the "More" menu below.  You may have new tasks coming up soon.</value>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteAssignedLabel" xml:space="preserve">
+    <value>WSZYSTKIE CZYNNOŚCI ZOSTAŁY WYKONANE</value>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteAssignedTitle" xml:space="preserve">
+    <value>Zachęcamy do dalszego działania</value>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteUnassignedBody" xml:space="preserve">
+    <value>In order to use be assigned tasks, you must first belong to a study step.  Please wait while your Site User assigns you to a study step.</value>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteUnassignedLabel" xml:space="preserve">
+    <value>WAITING FOR FIRST STEP</value>
+  </data>
+  <data name="MyTasksStatusCardConsentCompleteUnassignedTitle" xml:space="preserve">
+    <value>We are waiting for your step assignment</value>
+  </data>
+  <data name="MyTasksStatusCardConsentInitialBody" xml:space="preserve">
+    <value>In order to use this app, we need your consent.  Please use the information below to contact your site and get instructions on how to provide your consent.</value>
+  </data>
+  <data name="MyTasksStatusCardConsentInitialLabel" xml:space="preserve">
+    <value>ZGODA</value>
+  </data>
+  <data name="MyTasksStatusCardConsentInitialTitle" xml:space="preserve">
+    <value>Potrzebujemy Twojej zgody</value>
+  </data>
+  <data name="MyTasksStatusCardConsentInProgressBody" xml:space="preserve">
+    <value>In order to use this app, your consent needs to be approved.  Please wait for the approval.</value>
+  </data>
+  <data name="MyTasksStatusCardConsentInProgressLabel" xml:space="preserve">
+    <value>ZGODA</value>
+  </data>
+  <data name="MyTasksStatusCardConsentInProgressTitle" xml:space="preserve">
+    <value>We are waiting for consent approval</value>
+  </data>
+  <data name="MyTasksStatusCardDefaultButtonText" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="MyTasksStatusCardRemoteConsentInProgressBody" xml:space="preserve">
+    <value>Koordynatorzy badania analizują dokumentację. Wkrótce będą wiedzieć, czy możesz wziąć w nim udział. Jeśli chcesz uzyskać więcej informacji, prosimy o kontakt z ośrodkiem.</value>
+  </data>
+  <data name="MyTasksStatusCardRemoteConsentInProgressLabel" xml:space="preserve">
+    <value>SIGN CONSENT FORM</value>
+  </data>
+  <data name="MyTasksStatusCardRemoteConsentInProgressTitle" xml:space="preserve">
+    <value>Thank you for completing the eSignature process</value>
+  </data>
+  <data name="MyTasksStatusRemoteConsentBody" xml:space="preserve">
+    <value>In order to use the {0} app, we need you to sign the informed consent.</value>
+  </data>
+  <data name="MyTasksStatusRemoteConsentLabel" xml:space="preserve">
+    <value>SIGN INFORMED CONSENT</value>
+  </data>
+  <data name="MyTasksStatusRemoteConsentTitle" xml:space="preserve">
+    <value>We need your eSignature</value>
+  </data>
+  <data name="MyTasksTitle" xml:space="preserve">
+    <value>My Tasks</value>
+  </data>
+  <data name="NavActionBack" xml:space="preserve">
+    <value>Wstecz</value>
+  </data>
+  <data name="NavActionDone" xml:space="preserve">
+    <value>Gotowe</value>
+  </data>
+  <data name="NoAlertsArchivedText" xml:space="preserve">
+    <value>Brak zarchiwizowanych ostrzeżeń</value>
+  </data>
+  <data name="NoAlertsDescription" xml:space="preserve">
+    <value>Nie ma jeszcze żadnych nowych ostrzeżeń.</value>
+  </data>
+  <data name="NoAlertsTitle" xml:space="preserve">
+    <value>Brak ostrzeżeń</value>
+  </data>
+  <data name="NoFlowStepsMessage" xml:space="preserve">
+    <value>No Recorded Values Found!</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Not Available</value>
+  </data>
+  <data name="OkTitle" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OnceStudyStaffConfirms" xml:space="preserve">
+    <value>Gdy lekarz prowadzący badanie przeanalizuje formularz świadomej zgody i wyrazisz zgodę na udział w badaniu, będzie można kontynuować.</value>
+  </data>
+  <data name="PageTitleLogin" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="PasswordExpired" xml:space="preserve">
+    <value>Hasło wygasło</value>
+  </data>
+  <data name="PasswordExpiredPagePasswordExpiredLabelText" xml:space="preserve">
+    <value>Hasło wygasło</value>
+  </data>
+  <data name="PasswordExpiredPagePasswordExpiredText" xml:space="preserve">
+    <value>Hasło wygasło. Kliknij przycisk poniżej i postępuj zgodnie z instrukcjami, aby zmienić hasło.</value>
+  </data>
+  <data name="PasswordYouEnteredIncorrect" xml:space="preserve">
+    <value>The password you entered is incorrect. Please try again.</value>
+  </data>
+  <data name="PatientIdText" xml:space="preserve">
+    <value>Identyfikator pacjenta</value>
+  </data>
+  <data name="PinEntryPageForgotPinText" xml:space="preserve">
+    <value>Nie pamiętam hasła</value>
+  </data>
+  <data name="PoliciesPageContinueButtonText" xml:space="preserve">
+    <value>Kontynuuj</value>
+  </data>
+  <data name="PoliciesPagePolicyAcceptNewText" xml:space="preserve">
+    <value>Akceptuję </value>
+  </data>
+  <data name="PoliciesPagePolicyChangedText" xml:space="preserve">
+    <value>Nasze zasady uległy zmianie. Proszę zapoznać się z nowymi zasadami i je zaakceptować, aby móc kontynuować.</value>
+  </data>
+  <data name="PoliciesPagePolicyUpdatedText" xml:space="preserve">
+    <value>Aktualizacja zasad</value>
+  </data>
+  <data name="PoliciesPagePrivacyPolicyText" xml:space="preserve">
+    <value>Zasady ochrony prywatności</value>
+  </data>
+  <data name="PolicyImageHelpText" xml:space="preserve">
+    <value>Policy Icon</value>
+  </data>
+  <data name="PolicyPageCloseText" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="ProfileViewModelDialogErrorHeaderText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ProfileViewModelNewTimeZoneText" xml:space="preserve">
+    <value>New Time Zone</value>
+  </data>
+  <data name="ProfileViewModelOkText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ProfileViewModelTimeZoneNotUpdatedText" xml:space="preserve">
+    <value>Time Zone Not Updated</value>
+  </data>
+  <data name="ProfileViewModelTitleText" xml:space="preserve">
+    <value>Mój profil</value>
+  </data>
+  <data name="ProfileViewModelUpdateTimeZoneText" xml:space="preserve">
+    <value>Time Zone Updated</value>
+  </data>
+  <data name="RadioButtonSelectedHelpText" xml:space="preserve">
+    <value>This answer is currently selected.</value>
+  </data>
+  <data name="ReadText" xml:space="preserve">
+    <value>Czytanie</value>
+  </data>
+  <data name="ReconsentRequested" xml:space="preserve">
+    <value>Your re-consent is requested</value>
+  </data>
+  <data name="RegisteredEmailText" xml:space="preserve">
+    <value>Zarejestrowany e-mail</value>
+  </data>
+  <data name="RemoteConsentTitle" xml:space="preserve">
+    <value>SIGN INFORMED CONSENT</value>
+  </data>
+  <data name="SessionTimeOutPageEmailPlaceHolderText" xml:space="preserve">
+    <value>E-mail *</value>
+  </data>
+  <data name="SessionTimeOutPageForgotPasswordText" xml:space="preserve">
+    <value>Nie pamiętasz hasła?</value>
+  </data>
+  <data name="SessionTimeOutPageHeaderText" xml:space="preserve">
+    <value>Przekroczenie czasu sesji</value>
+  </data>
+  <data name="SessionTimeOutPageHeaderTextSubtitle" xml:space="preserve">
+    <value>Sesja wygasła z powodu braku aktywności.</value>
+  </data>
+  <data name="SessionTimeOutPagePasswordPlaceHolderText" xml:space="preserve">
+    <value>Hasło *</value>
+  </data>
+  <data name="SessionTimeOutPageSigInText" xml:space="preserve">
+    <value>Zaloguj</value>
+  </data>
+  <data name="SignInErrorHelpText" xml:space="preserve">
+    <value>Sign in button is disabled. Please review input errors and try again.</value>
+  </data>
+  <data name="SignInformedConsentText" xml:space="preserve">
+    <value>Sign Informed Consent</value>
+  </data>
+  <data name="SignInReadyHelpText" xml:space="preserve">
+    <value>Ready to sign in.</value>
+  </data>
+  <data name="SiteIdText" xml:space="preserve">
+    <value>Identyfikator ośrodka</value>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StudyLogoHelpText" xml:space="preserve">
+    <value>Clinical 6 Logo</value>
+  </data>
+  <data name="StudyStartDateText" xml:space="preserve">
+    <value>Data rozpoczęcia badania</value>
+  </data>
+  <data name="TasksText" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="TheSiteHasNotCompleted" xml:space="preserve">
+    <value>The site has not completed your paper consent process yet. Once you are marked as consented, you will be able to access the mobile app.</value>
+  </data>
+  <data name="TypeHere" xml:space="preserve">
+    <value>Type Here</value>
+  </data>
+  <data name="UnArchiveKey" xml:space="preserve">
+    <value>Cofnij archiwizację</value>
+  </data>
+  <data name="UnreadText" xml:space="preserve">
+    <value>Nieprzeczytane</value>
+  </data>
+  <data name="UserDeathInformatioTitle" xml:space="preserve">
+    <value>Death Information</value>
+  </data>
+  <data name="UserGuideText" xml:space="preserve">
+    <value>User Guide</value>
+  </data>
+  <data name="UserProfileFirstNameLabel" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="UserProfileLastNameLabel" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="VersionFormatText" xml:space="preserve">
+    <value>Wersja: {0}</value>
+  </data>
+  <data name="VideoConsultListPageTitleText" xml:space="preserve">
+    <value>Video Consult</value>
+  </data>
+  <data name="VideoConsultRoomPageCloseBtnText" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="VideoConsultRoomPageTitleText" xml:space="preserve">
+    <value>Video Consult</value>
+  </data>
+  <data name="VideoDescription" xml:space="preserve">
+    <value>Please find bellow the list of the sheduled video consultations. You will see a gree check icon next to an active consultation that indicates your site PI is waiting for you to join the session. Please tap on the active consult to begin the session.</value>
+  </data>
+  <data name="VideoListHelpText" xml:space="preserve">
+    <value>This is the video list</value>
+  </data>
+  <data name="VideoListTitle" xml:space="preserve">
+    <value>Filmy</value>
+  </data>
+  <data name="VideoListViewModelErrorHeaderText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="VideoListViewModelOkText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="VideoListViewModelVideoErrorText" xml:space="preserve">
+    <value>No videos available</value>
+  </data>
+  <data name="WaitingBeginConsult" xml:space="preserve">
+    <value>Joining video consult…</value>
+  </data>
+  <data name="WithdrawnAccountPageInfoText" xml:space="preserve">
+    <value>Wycofano Cię z aplikacji. W przypadku pytań prosimy o kontakt z ośrodkiem.</value>
+  </data>
+  <data name="WithdrawnAccountPageText" xml:space="preserve">
+    <value>Withdrawn Account</value>
+  </data>
+  <data name="YouConsentfFormsHaveChanged" xml:space="preserve">
+    <value>You consent forms(s) have changed and we need your re-consent. Please log in to the patient portal to re-consent.</value>
+  </data>
+  <data name="YouHaveNotCompletedEconsent" xml:space="preserve">
+    <value>You have not completed the e-consent process. Please log in to the patient portal to complete the consent process.</value>
+  </data>
+  <data name="YourAccountHasBeenDisabled" xml:space="preserve">
+    <value>Konto zostało zablokowane z powodu zbyt wielu nieudanych prób zalogowania się. Aby odblokować konto, można wykonać jedną z poniższych czynności:</value>
+  </data>
+  <data name="YourConsentProcessInProgress" xml:space="preserve">
+    <value>Your consent process is in progress</value>
+  </data>
+  <data name="YourConsentProcessIsComplete" xml:space="preserve">
+    <value>Your consent process is complete</value>
+  </data>
+  <data name="YourPasswordHasExpired" xml:space="preserve">
+    <value>Hasło wygasło. Kliknij przycisk poniżej i postępuj zgodnie z instrukcjami, aby zmienić hasło.</value>
+  </data>
+  <data name="MyTasksStatusRemoteConsentBodyRe" xml:space="preserve">
+    <value>We have made changes to the informed consent. In order to continue participating, we need you to sign the informed consent again.</value>
+  </data>
+  <data name="MyTasksStatusRemoteConsentTitleRe" xml:space="preserve">
+    <value>We need your re-consent</value>
+  </data>
+  <data name="MyTasksStatusRemoteConsentLabelRe" xml:space="preserve">
+    <value>RE-CONSENT</value>
+  </data>
+  <data name="ExternalOAuthRefreshTokenAuthorizedBodyText" xml:space="preserve">
+    <value>We are receiving data from your {0}.</value>
+  </data>
+  <data name="ExternalOAuthRefreshTokenAuthorizedTitleText" xml:space="preserve">
+    <value>{0} account is authorized</value>
+  </data>
+  <data name="ExternalOAuthRefreshTokenUnauthorizedButtonText" xml:space="preserve">
+    <value>Authorize {0}</value>
+  </data>
+  <data name="ExternalOAuthRefreshTokenUnauthorizedBodyText" xml:space="preserve">
+    <value>Please tap the button below to authorize your {0} account, so that we can start tracking your data.</value>
+  </data>
+  <data name="ExternalOAuthRefreshTokenUnauthorizedTitleText" xml:space="preserve">
+    <value>{0} account is not authorized</value>
+  </data>
+  <data name="HomeYouHaveNoActivity" xml:space="preserve">
+    <value>Masz {0} czynność</value>
+  </data>
+  <data name="PasswordExpiredPageResetPasswordText" xml:space="preserve">
+    <value>Resetuj hasło</value>
+  </data>
+  <data name="TimeEntryValidationError" xml:space="preserve">
+    <value>Wprowadź godzinę pomiędzy {0} - {1}</value>
+  </data>
+  <data name="SprayValidationError" xml:space="preserve">
+    <value>Godzina ostatniego rozpylenia nie może być przed godziną pierwszego rozpylenia</value>
+  </data>
+  <data name="BiometricBiometricsFingerPrintFooter" xml:space="preserve">
+    <value>Uwaga: wszystkie odciski palców zapisane w tym urządzeniu mogą być wykorzystane do zalogowania się na konto.</value>
+  </data>
+  <data name="BiometricBiometricsNotNow" xml:space="preserve">
+    <value>Nie teraz</value>
+  </data>
+  <data name="BiometricBiometricsTouchIDFooter" xml:space="preserve">
+    <value>Uwaga: wszystkie odciski palców funkcji Touch ID zapisane w tym urządzeniu mogą być wykorzystane do zalogowania się na konto.</value>
+  </data>
+  <data name="BiometricFaceIDEnableTitle" xml:space="preserve">
+    <value>Włącz funkcję Face ID</value>
+  </data>
+  <data name="BiometricFaceIDLoginTitle" xml:space="preserve">
+    <value>Logowanie przez Face ID</value>
+  </data>
+  <data name="BiometricFaceIDMessage" xml:space="preserve">
+    <value>Następnym razem podczas logowania skorzystaj z funkcji Face ID, aby uzyskać szybszy, łatwiejszy i bezpieczny dostęp do konta.</value>
+  </data>
+  <data name="BiometricFaceIDReason" xml:space="preserve">
+    <value>Spróbuj ponownie</value>
+  </data>
+  <data name="BiometricFingerPrinEnableTitle" xml:space="preserve">
+    <value>Włącz aplikację Fingerprint</value>
+  </data>
+  <data name="BiometricFingerPrinTitle" xml:space="preserve">
+    <value>Logowanie przez Fingerprint</value>
+  </data>
+  <data name="BiometricFingerPrintMessage" xml:space="preserve">
+    <value>Następnym razem podczas logowania skorzystaj z aplikacji Fingerprint, aby uzyskać szybszy, łatwiejszy i bezpieczny dostęp do konta.</value>
+  </data>
+  <data name="BiometricSignFingerPrintTitle" xml:space="preserve">
+    <value>Odcisk palca do aplikacji {0}</value>
+  </data>
+  <data name="BiometricSignTitle" xml:space="preserve">
+    <value>Zaloguj się do aplikacji {0}</value>
+  </data>
+  <data name="BiometricTouchIDDMessage" xml:space="preserve">
+    <value>Następnym razem podczas logowania skorzystaj z funkcji Touch ID, aby uzyskać szybszy, łatwiejszy i bezpieczny dostęp do konta.</value>
+  </data>
+  <data name="BiometricTouchIDEnableTitle" xml:space="preserve">
+    <value>Włącz funkcję Touch ID</value>
+  </data>
+  <data name="BiometricTouchIDFirtsTimeTitle" xml:space="preserve">
+    <value>Potwierdźmy odcisk palca.</value>
+  </data>
+  <data name="BiometricTouchIDLoginTitle" xml:space="preserve">
+    <value>Logowanie przez Touch ID</value>
+  </data>
+  <data name="BiometricTouchIDTitle" xml:space="preserve">
+    <value>Zeskanuj palec, żeby kontynuować.</value>
+  </data>
+  <data name="BiometricUseFaceId" xml:space="preserve">
+    <value>Skorzystaj z Face ID</value>
+  </data>
+  <data name="BiometricUseFingerprint" xml:space="preserve">
+    <value>Skorzystaj z Fingerprint</value>
+  </data>
+  <data name="BiometricUseTouchId" xml:space="preserve">
+    <value>Skorzystaj z Touch ID</value>
+  </data>
+  <data name="HomeKeepGreatWork" xml:space="preserve">
+    <value>Zachęcamy do dalszego działania.</value>
+  </data>
+  <data name="BiometricFingerPrintScanRecognized" xml:space="preserve">
+    <value>Odcisk palca rozpoznany</value>
+  </data>
+  <data name="BiometricTouchIDHint" xml:space="preserve">
+    <value>Czujnik dotykowy</value>
+  </data>
+  <data name="ValueMaxMessageError" xml:space="preserve">
+    <value>Wartość nie mieści się w zakresie {0} - {1}. Proszę spróbować ponownie.</value>
+  </data>
+  <data name="FingerprintNotRecognized" xml:space="preserve">
+    <value>Nie rozpoznano odcisku palca. Spróbuj ponownie.</value>
+  </data>
+  <data name="FlowProcessConfirmationSummaryButtonText" xml:space="preserve">
+    <value>Potwierdzać</value>
+  </data>
+</root>

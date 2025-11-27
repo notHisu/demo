@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BiometricAuthenticationError" xml:space="preserve">
+		<value>Échec d’authentification</value>
+	</data>
+	<data name="BiometricBiometricsFaceIDFooter" xml:space="preserve">
+		<value>Attention : Toutes les empreintes digitales et Face ID stockées sur ce dispositif peuvent être utilisées pour vous connecter à votre compte.</value>
+	</data>
+	<data name="BiometricBiometricsFingerPrintFooter" xml:space="preserve">
+		<value>Attention : Toutes les empreintes digitales stockées sur ce dispositif peuvent être utilisées pour vous connecter à votre compte.</value>
+	</data>
+	<data name="BiometricBiometricsTouchIDFooter" xml:space="preserve">
+		<value>Attention : Toutes les empreintes digitales de l’identifiant tactile stockées sur ce dispositif peuvent être utilisées pour vous connecter à votre compte.</value>
+	</data>
+	<data name="BiometricErrorTitle" xml:space="preserve">
+		<value>Erreur</value>
+	</data>
+	<data name="BiometricFaceIDEnableTitle" xml:space="preserve">
+		<value>Activer l’identifiant facial</value>
+	</data>
+	<data name="BiometricFaceIDError" xml:space="preserve">
+		<value>Activez {0}</value>
+	</data>
+	<data name="BiometricFaceIDLoginTitle" xml:space="preserve">
+		<value>Identifiant facial</value>
+	</data>
+	<data name="BiometricFaceIDMessage" xml:space="preserve">
+		<value>La prochaine fois que vous vous connectez, utilisez votre identifiant facial pour un accès plus rapide, plus facile et plus sécurisé à votre compte.</value>
+	</data>
+	<data name="BiometricFingerPrinEnableTitle" xml:space="preserve">
+		<value>Activer l’empreinte digitale</value>
+	</data>
+	<data name="BiometricFingerPrintMessage" xml:space="preserve">
+		<value>La prochaine fois que vous vous connectez, utilisez votre empreinte digitale pour un accès plus rapide, plus facile et plus sécurisé à votre compte.</value>
+	</data>
+	<data name="BiometricFingerPrinTitle" xml:space="preserve">
+		<value>Connexion par empreinte digitale</value>
+	</data>
+	<data name="BiometricNotAvailableTitle" xml:space="preserve">
+		<value>Le dispositif ne dispose pas de méthodes biométriques ou de NIP pour se connecter</value>
+	</data>
+	<data name="BiometricTouchIDDMessage" xml:space="preserve">
+		<value>La prochaine fois que vous vous connectez, utilisez votre identifiant tactile pour un accès plus rapide, plus facile et plus sécurisé à votre compte.</value>
+	</data>
+	<data name="BiometricTouchIDEnableTitle" xml:space="preserve">
+		<value>Activer l’identifiant tactile</value>
+	</data>
+	<data name="BiometricTouchIDFirtsTimeTitle" xml:space="preserve">
+		<value>Confirmez votre empreinte digitale maintenant.</value>
+	</data>
+	<data name="BiometricUseTouchId" xml:space="preserve">
+		<value>Utilisez Touch ID</value>
+	</data>
+	<data name="BiometricUsePin" xml:space="preserve">
+		<value>Utilisez le NIP</value>
+	</data>
+	<data name="BiometricUseFingerprint" xml:space="preserve">
+		<value>Utilisez les empreintes digitales</value>
+	</data>
+	<data name="BiometricUseFaceId" xml:space="preserve">
+		<value>Utilisez Face ID</value>
+	</data>
+	<data name="BiometricFaceIDReason" xml:space="preserve">
+		<value>Essayez à nouveau</value>
+	</data>
+	<data name="BiometricTouchIDTitle" xml:space="preserve">
+		<value>Scannez votre doigt pour continuer.</value>
+	</data>
+	<data name="BiometricTouchIDLoginTitle" xml:space="preserve">
+		<value>Connexion par identifiant tactile</value>
+	</data>
+	<data name="BiometricTryAgain" xml:space="preserve">
+		<value>Essayez à nouveau</value>
+	</data>
+	<data name="BiometricTouchIDHint" xml:space="preserve">
+		<value>Capteur tactile</value>
+	</data>
+	<data name="BiometricBiometricsNotNow" xml:space="preserve">
+		<value>Pas maintenant</value>
+	</data>
+</root>

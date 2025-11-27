@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage 
+        xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        x:Class="Xamarin.Forms.Clinical6.Views.MenuPage"
+        xmlns:views="clr-namespace:Xamarin.Forms.Clinical6.UI.Views"
+        xmlns:ctrl="clr-namespace:Xamarin.Forms.Clinical6.UI.Controls" 
+        xmlns:ex="clr-namespace:Xamarin.Forms.Clinical6.UI.MarkupExtensions" 
+        xmlns:vm="clr-namespace:Xamarin.Forms.Clinical6.ViewModels"
+        xmlns:converters="clr-namespace:Xamarin.Forms.Clinical6.UI.Converters"
+        x:TypeArguments="vm:AppMenuViewModel" 
+        BackgroundColor="{StaticResource LoginBackgroundSolid}"
+        NavTitle = "{ex:Localized MenuPageTitleText}"
+        Title="{ex:Localized MenuPageTitleText}"
+        xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+        ios:Page.UseSafeArea="true">
+    <views:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CurrencyConverter x:Key="CurrencyFormatter" />
+        </ResourceDictionary>
+    </views:BaseContentPage.Resources>
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+          RowSpacing="0" ColumnSpacing="0" Margin="4" BackgroundColor="{StaticResource LoginBackgroundSolid}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image HeightRequest="60" x:Name="imageLogo" Margin="0,20" Style="{StaticResource flowIconForm}"
+               AutomationProperties.HelpText="{ex:Localized StudyLogoHelpText}" VerticalOptions="Center"/>
+
+        <StackLayout Grid.Row="1" IsVisible="{Binding IsAmazonPaymentAvailable}">
+            <BoxView BackgroundColor="{StaticResource SeparatorLine}" HeightRequest="1" VerticalOptions="Center" />
+            <StackLayout Orientation="Horizontal" Padding="25">
+                <StackLayout>
+                    <Label Text="{ex:Localized AmazonBalanceLabelDesc}" TextColor="{StaticResource TextDark}" FontSize="Small"/>
+                    <Label Text="{Binding AmazonPayment.Balance, Converter={StaticResource CurrencyFormatter}}" FontAttributes="Bold" FontSize="20" TextColor="{StaticResource TextDark}"/>
+                </StackLayout>
+                <Button Text="{ex:Localized AmazonBalanceRedeemButtonText}" BackgroundColor="Transparent"
+                        HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"
+                        TextColor="#007ac9" FontSize="14" Command="{Binding RedeemPaymentsCommand}"/>
+            </StackLayout>
+            <BoxView BackgroundColor="{StaticResource SeparatorLine}" HeightRequest="1" VerticalOptions="Center" />
+        </StackLayout>
+
+        <ListView Grid.Row="2"
+                  Margin="20,0,0,0"
+                  VerticalOptions="FillAndExpand" 
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}" 
+                  ItemTapped="HandleItemTapped" 
+                  ItemsSource="{Binding Menus}" 
+                  CachingStrategy="RecycleElement"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="None" 
+                  AutomationProperties.Name = "{ex:Localized MenuListHelpText}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HeightRequest="60" Padding="5,0" Margin="0,5,0,0">
+                            <ctrl:AppMenuViewCell VerticalOptions="CenterAndExpand" AutomationId="{Binding Title}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid Grid.Row="3" RowSpacing="0" ColumnSpacing="0" HorizontalOptions="CenterAndExpand"
+              VerticalOptions="StartAndExpand" Margin="0,20,0,10"  Padding="0" IsVisible="{Binding IsBiometricsAvailable}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.ColumnSpan="3" BackgroundColor="{StaticResource SeparatorLine}" HeightRequest="1" VerticalOptions="Center"/>
+            <Image Grid.Row="1" Source="{Binding BiometricsImage}" Aspect = "AspectFit" VerticalOptions="Center" HorizontalOptions="Center"
+                   Margin="25,10,15,2" HeightRequest="22" AutomationProperties.IsInAccessibleTree="False"/>
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding BiometricsTitle}"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0"
+                   FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" MaxLines="3" LineBreakMode="TailTruncation"
+                   TextColor="Black" Style="{StaticResource textPrimary}" AutomationProperties.IsInAccessibleTree="True"/>
+            <ctrl:CustomSwitch Margin="5,0,5,0" Grid.Row="1" Grid.Column="2" IsToggled="{Binding IsBiometricsActive}" VerticalOptions="Center"/>
+        </Grid>
+
+        <StackLayout Grid.Row="4" Spacing="0" VerticalOptions="EndAndExpand">
+            <Button Text="{ex:Localized MenuPageSignOutText}" Command="{Binding LogoutAction.Command}" IsEnabled="true"
+                    Style="{StaticResource drawerMenuButtonStyle}" HeightRequest="44" Margin="20" />
+
+            <BoxView BackgroundColor="{StaticResource SeparatorLine}" HeightRequest="1" Margin="0,10,0,10" VerticalOptions="Center"/>
+
+            <Label Text="{ex:Localized MenuPageCopyrightText}" TextColor="Gray" FontSize="12"
+                   HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" 
+                   Style="{StaticResource textPrimary}" AutomationProperties.IsInAccessibleTree="True"/>
+
+            <ctrl:VersionPrivacyLabel Margin="0,4,0,30" 
+                                      VersionText="{Binding AppVersion}"
+                                      PrivacyText="{ex:Localized EmailPMAPagePrivacyLinkText}"
+                                      Command="{Binding OnPolicyCommand}"/>
+        </StackLayout>
+    </Grid>
+</views:BaseContentPage>
